@@ -90,31 +90,36 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   max-width: 650px;
   margin: 0.5rem auto 0;
   padding: 0 1rem;
+  display: flex;
+  justify-content: center; /* keeps box centered on the page */
 }
 
 .live-banner .box {
   font-family: 'HomeVideo', Arial, sans-serif;
   background: #000;
   color: #fff;
-  text-align: left;              /* same alignment as sessions */
+  text-align: left;            /* left-align inside */
   padding: 1rem;
   font-size: 0.9rem;
-  border-radius: 1rem;           /* matches .session */
+  border-radius: 1rem;
   line-height: 1.4;
+  width: 100%;                 /* same width as the white cards */
+  max-width: 650px;
   box-sizing: border-box;
 }
 
-/* clean “UP NEXT” label */
+/* clean “UP NEXT” */
 .live-banner .box strong {
-  all: unset;                  
+  all: unset;                  /* remove white highlight */
   display: block;
   font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.3rem;           
+  font-size: 1.15rem;          /* slightly larger */
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #fff;
   margin-bottom: 0.3rem;
 }
+
 
 
 /* ====== Schedule ====== */
