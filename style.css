@@ -10,77 +10,35 @@
   font-display: swap;
 }
 
-/* ====== Base ====== */
+/* ===== Base ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { font-family: Arial, sans-serif; background: #f4f4ec; color: #111; }
 img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
-/* Center entire layout */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body > * {
-  width: 100%;
-  max-width: 650px;
-  box-sizing: border-box;
-}
-
-/* ====== Header ====== */
-.header { margin: 0.75rem auto 0; padding: 0 1rem; }
+/* ===== Header ===== */
+.header { max-width: 650px; margin: 0.75rem auto 0; padding: 0 1rem; }
 .header-img { width: 100%; height: auto; border-bottom: 2px solid #000; }
-.header-note {
-  font-size: 0.75rem;
-  color: #444;
-  text-align: center;
-  margin-top: 0.4rem;
-}
+.header-note { font-size: 0.75rem; color: #444; text-align: center; margin-top: 0.4rem; }
 .header-note a { color: #000; text-decoration: underline; font-weight: bold; }
 
-/* ====== Hero ====== */
-.hero { margin: 0.5rem auto 0; padding: 0 1rem; text-align: center; }
-.hero h2 {
-  font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.85rem;
-  line-height: 1.1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (max-width: 480px) {
-  .hero h2 { font-size: 1.25rem; white-space: nowrap; text-overflow: clip; }
-}
+/* ===== Hero ===== */
+.hero { max-width: 650px; margin: 0.5rem auto 0; padding: 0 1rem; text-align: center; }
+.hero h2 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1.85rem; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 480px) { .hero h2 { font-size: 1.25rem; text-overflow: clip; } }
 .stack-lines { margin-top: 0.25rem; }
 .stack-lines .line { font-size: 0.9rem; line-height: 1.15rem; }
 .stack-lines .line + .line { margin-top: 0; }
 .stack-lines a { color: #000; text-decoration: underline; }
 
-/* ====== Meta ====== */
-.meta { margin: 0.6rem auto; padding: 0 1rem; text-align: center; font-size: 0.85rem; }
-.info-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
-  margin-top: 0.4rem;
-}
-.info-grid div {
-  background: #fff;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  border: 1px solid #e6e6e6;
-}
+/* ===== Meta ===== */
+.meta { max-width: 650px; margin: 0.6rem auto; padding: 0 1rem; text-align: center; font-size: 0.85rem; }
+.info-grid { display: flex; justify-content: space-around; gap: 0.5rem; margin-top: 0.4rem; }
+.info-grid div { background: #fff; border-radius: 0.5rem; padding: 0.5rem; font-size: 0.8rem; border: 1px solid #e6e6e6; }
 .info-grid span { color: #666; }
 .sponsors { font-size: 0.75rem; color: #555; margin-top: 0.35rem; }
 
-/* ====== Live banner ====== */
-.live-banner {
-  width: 100%;
-  max-width: 650px;
-  margin: 0.5rem auto 0;
-  padding: 0 1rem;
-}
+/* ===== Live Banner ===== */
+.live-banner { max-width: 650px; margin: 0.5rem auto 0; padding: 0 1rem; }
 .live-banner .box {
   font-family: 'HomeVideo', Arial, sans-serif;
   background: #000;
@@ -94,45 +52,37 @@ body > * {
   box-sizing: border-box;
 }
 .live-banner .box strong {
-  background: transparent !important;
-  color: #fff !important;
+  background: none;
+  color: #fff;
   font-family: 'HomeVideoBold', Arial, sans-serif;
   font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.4rem;
   display: block;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  -webkit-text-fill-color: #fff !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
-/* ====== Schedule ====== */
-.schedule {
-  margin: 0.5rem auto 2.25rem;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.session {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  padding: 1rem;
-  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  cursor: pointer;
-}
+/* ===== Schedule ===== */
+.schedule { max-width: 650px; margin: 0.5rem auto 2.25rem; padding: 0 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.session { background: #fff; border: 1px solid #ddd; border-radius: 1rem; padding: 1rem; transition: background 0.2s ease, border-color 0.2s ease; cursor: pointer; }
 .session:hover { background: #f9f9f9; }
 .session.active { background: #f2f2f2; border-color: #cfcfcf; }
 .session.current { border-color: #000; }
-.session h3 {
-  font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-}
+.session h3 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1rem; margin-bottom: 0.3rem; }
 .session small { font-size: 0.75rem; color: #666; display: block; }
 .session .desc { margin-top: 0.5rem; font-size: 0.85rem; color: #333; }
-.live-tag {
-  background: #000; color:
+.live-tag { background: #000; color: #fff; font-size: 0.65rem; padding: 0.15rem 0.35rem; border-radius: 0.5rem; margin-left: 0.4rem; }
+
+/* ===== Footer ===== */
+.footer { max-width: 650px; margin: 0.5rem auto 5rem; padding: 0 1rem; text-align: center; }
+.author { font-size: 0.8rem; color: #333; }
+.author a { color: #000; text-decoration: underline; }
+
+/* ===== Bottom Nav ===== */
+.bottom-nav { position: fixed; bottom: 1rem; left: 0; right: 0; display: flex; justify-content: center; gap: 0.4rem; }
+.bottom-nav button { flex: 1; max-width: 180px; padding: 0.6rem; border-radius: 0.75rem; font-size: 0.8rem; cursor: pointer; }
+.btn-main { background: #000; color: #fff; border: none; }
+.btn-alt { border: 1px solid #ccc; background: #fff; color: #000; }
