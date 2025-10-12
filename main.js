@@ -37,7 +37,7 @@ const schedule = [
     end: `${DAY}T10:30:00${Z}`,
     title: 'Fireside Chat — Power in Action',
     speaker: 'Olamide Olowe — Founder & CEO of Topicals',
-    img: 'xxx',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68e3cd4f71d2601a907dfd9e_image_50405121%20(2).JPG',
     room: 'Main Auditorium',
     desc: 'A conversation with Forbes 30 Under 30 entrepreneur Olamide Olowe on leadership, resilience, and driving systemic change in beauty and business.'
   },
