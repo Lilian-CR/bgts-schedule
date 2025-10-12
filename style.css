@@ -106,15 +106,15 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
 /* Speaker Image */
 .speaker-pic {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  margin: 0.75rem auto 0.5rem;
+  display: block;
   border: 2px solid #000;
 }
+
 
 /* Footer */
 .footer {
