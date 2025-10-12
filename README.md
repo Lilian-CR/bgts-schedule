@@ -25,8 +25,8 @@ This project is entirely **independent** and **non-commercial**.
 ---
 
 ## Author
-<p align="center">
-  <img src="./images/mobile-view.png" alt="Author Pic" width="250"/>
+<p align="left">
+  <img src="./images/pic-author.jpg" alt="Author Pic" width="250"/>
   
 </p>
 
