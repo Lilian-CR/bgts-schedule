@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Girls Tech Summit 2025 — Live Schedule</title>
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">BG</div>
+      <div class="title">
+        <h1>Black Girls Tech Summit 2025</h1>
+        <p>The Shift — Power, Progress &amp; Possibility</p>
+      </div>
+      <button id="jumpNowBtn" class="btn-small">Now</button>
+    </div>
+  </header>
+
+  <!-- Meta / Hero -->
+  <section class="meta">
+    <div>
+      <p>Thu, 13 Nov 2025 · Zalando BHW · Berlin</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Hedwig-Wachenheim-Stra%C3%9Fe+7+10243+Berlin" target="_blank">📍 Map</a>
+    </div>
+    <div class="info-grid">
+      <div><span>Doors</span><strong>09:00</strong></div>
+      <div><span>Wrap</span><strong>19:00</strong></div>
+      <div><span>Timezone</span><strong id="tzLabel">CET</strong></div>
+    </div>
+    <p class="sponsors">Headline: Zalando · Silver: SAP SE</p>
+  </section>
+
+  <!-- Live banner -->
+  <div id="liveBanner" class="live-banner" aria-live="polite"></div>
+
+  <!-- Schedule -->
+  <main id="schedule" class="schedule"></main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <div class="footer-label">After-party</div>
+      <div class="footer-time">17:30 – 19:00</div>
+      <p>Build meaningful connections — music, fun &amp; drinks.</p>
+    </div>
+  </footer>
+
+  <!-- Bottom nav -->
+  <nav class="bottom-nav">
+    <button id="showAll" class="btn-main">All</button>
+    <button id="showCurrent" class="btn-alt">Current</button>
+    <button id="scrollTop" class="btn-alt">Top</button>
+  </nav>
+
+  <script src="main.js"></script>
+</body>
+</html>
