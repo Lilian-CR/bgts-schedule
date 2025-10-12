@@ -143,7 +143,7 @@ const schedule = [
     end: `${DAY}T16:00:00${Z}`,
     title: 'Crafting CVs & Nailing Interviews',
     speaker: 'Ibtehal Hussein (Global TA Lead, HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
-    img: 'xxx',
+    img: 'https://media.licdn.com/dms/image/v2/D4D22AQE9MkUr4xFOSA/feedshare-shrink_1280/B4DZm1i_TMJYAs-/0/1759687473190?e=1762992000&v=beta&t=-1Iv3O8klCnZaVCYQd731zCaAnadySFRIJ9E7rbsUDk',
     room: 'Room C',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
