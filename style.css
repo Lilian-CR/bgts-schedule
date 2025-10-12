@@ -58,28 +58,25 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
 /* UP NEXT */
 .live-banner .box span.upnext {
-  display: block;
-  font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.4rem;
-  color: #fff;
-  background: transparent !important;
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0.4rem 0;
+  background: none !important;
   background-color: transparent !important;
-  box-shadow: none !important;
+  color: #fff !important;
   text-shadow: none !important;
-  outline: none !important;
+  box-shadow: none !important;
   border: none !important;
+  outline: none !important;
   mix-blend-mode: normal !important;
-  -webkit-text-fill-color: #fff !important;
-  -webkit-background-clip: text !important;
+  isolation: isolate;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   user-select: none;
-  isolation: isolate;
-  position: relative;
-  z-index: 1;
+
+  /* these two lines stop Chrome/Android “canvas” box painting */
+  contain: paint;
+  background-clip: padding-box !important;
 }
 
 /* Schedule */
