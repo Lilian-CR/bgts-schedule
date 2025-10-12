@@ -27,7 +27,7 @@ const schedule = [
     end: `${DAY}T09:45:00${Z}`,
     title: 'Opening Remarks & Welcome',
     speaker: 'Chiedza Muguti — Product Leader & Coach',
-    img: 'img: 'xxx',
+    img: 'https://placehold.co/150x150',
     room: 'Main Auditorium',
     desc: 'Kick off the summit with inspiring remarks by product leader and coach Chiedza Muguti, setting the tone for a day of empowerment and connection.'
   },
