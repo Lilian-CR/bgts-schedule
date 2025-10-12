@@ -88,39 +88,33 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 /* ====== Live banner ====== */
 .live-banner {
   max-width: 650px;
-  margin: 0.5rem auto 0;
+  margin: 0.5rem auto 0;    /* keeps the whole block centered */
   padding: 0 1rem;
-  display: flex;
-  justify-content: center; /* keeps black box centered */
 }
 
 .live-banner .box {
   font-family: 'HomeVideo', Arial, sans-serif;
   background: #000;
   color: #fff;
-  text-align: center;           /* centers all inner text */
+  text-align: left;          /* LEFT aligned inside the centered box */
   padding: 1rem;
   font-size: 0.9rem;
-  border-radius: 1rem;          /* same look as session cards */
+  border-radius: 1rem;
   line-height: 1.4;
   width: 100%;
-  max-width: 650px;
   box-sizing: border-box;
 }
 
-/* “UP NEXT” — larger, clean white, no highlight */
+/* Clean “UP NEXT” text — no white box, no highlight */
 .live-banner .box strong {
-  background: none !important;  /* kills any residual white highlight */
-  color: #fff !important;
+  all: unset;                /* removes every browser default */
   font-family: 'HomeVideoBold', Arial, sans-serif;
   font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #fff;
   margin-bottom: 0.4rem;
   display: block;
-  border: none;
-  box-shadow: none;
-  padding: 0;
 }
 
 /* ====== Schedule ====== */
