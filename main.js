@@ -109,11 +109,12 @@ function renderBanner(now){
   const current = schedule.find(s => within(now, s.start, s.end));
   const next = schedule.find(s => new Date(s.start) > now);
   const banner = $('#liveBanner');
+
   if (current) {
-    banner.innerHTML = `<div class="box">NOW: ${current.title}</div>`;
+    banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
   } else if (next) {
     const mins = Math.round((new Date(next.start) - now) / 60000);
-    banner.innerHTML = `<div class="box">UP NEXT: ${next.title} in ${mins} min</div>`;
+    banner.innerHTML = `<div class="box"><strong>UP NEXT:</strong><br>${next.title} in ${mins} min</div>`;
   } else {
     banner.innerHTML = '';
   }
