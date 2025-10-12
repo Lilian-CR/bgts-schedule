@@ -27,10 +27,9 @@ This project is entirely **independent** and **non-commercial**.
 ## Author
 <p align="left">
   <img src="./images/pic-author.jpg" alt="Author Pic" width="250"/>
-  
 </p>
 
 **Lilian Rodrigues**  
 - Aspiring Front-End · Back-End · Full-Stack Developer
 - ReDI School Full-Stack Development Alumna — Berlin, Germany
-- [LinkedIn]([https://www.linkedin.com/in/lilian-rodrigues]
+- **LinkedIn** ([https://www.linkedin.com/in/lilian-rodrigues]
