@@ -21,58 +21,168 @@ function getNowMs() {
 
 // ---- Schedule data ----
 const schedule = [
-  { id: 'opening', start: `${DAY}T09:30:00${Z}`, end: `${DAY}T09:45:00${Z}`,
-    title: 'Opening Remarks & Welcome', speaker: 'Chiedza Muguti',
-    desc: 'Kick off the summit with inspiring remarks by product leader and coach Chiedza Muguti, setting the tone for a day of empowerment and connection.' },
-  { id: 'fireside', start: `${DAY}T09:45:00${Z}`, end: `${DAY}T10:30:00${Z}`,
-    title: 'Fireside Chat — Power in Action', speaker: 'Olamide Olowe',
-    desc: 'A conversation with Olamide Olowe, founder of Topicals, on leadership, resilience, and driving systemic change.' },
-  { id: 'wealth', start: `${DAY}T10:30:00${Z}`, end: `${DAY}T11:15:00${Z}`,
-    title: 'Level Up Your Wealth', speaker: 'Dineo Ledwaba-Chapman',
-    desc: 'Practical tools for financial growth and investment strategies tailored to Black women’s long-term independence.' },
-  { id: 'break1', start: `${DAY}T11:20:00${Z}`, end: `${DAY}T11:30:00${Z}`,
-    title: 'Break & Networking', desc: 'Short networking break — connect and recharge.' },
-  { id: 'founders', start: `${DAY}T11:30:00${Z}`, end: `${DAY}T12:15:00${Z}`,
+  {
+    id: 'opening',
+    start: `${DAY}T09:30:00${Z}`,
+    end: `${DAY}T09:45:00${Z}`,
+    title: 'Opening Remarks & Welcome',
+    speaker: 'Chiedza Muguti — Product Leader & Coach',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/685bb8865a3af01f3afa1aa1_Chiedza%20Muguti.jpeg',
+    room: 'Main Auditorium',
+    desc: 'Kick off the summit with inspiring remarks by product leader and coach Chiedza Muguti, setting the tone for a day of empowerment and connection.'
+  },
+  {
+    id: 'fireside',
+    start: `${DAY}T09:45:00${Z}`,
+    end: `${DAY}T10:30:00${Z}`,
+    title: 'Fireside Chat — Power in Action',
+    speaker: 'Olamide Olowe — Founder & CEO of Topicals',
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'A conversation with Forbes 30 Under 30 entrepreneur Olamide Olowe on leadership, resilience, and driving systemic change in beauty and business.'
+  },
+  {
+    id: 'wealth',
+    start: `${DAY}T10:30:00${Z}`,
+    end: `${DAY}T11:15:00${Z}`,
+    title: 'Level Up Your Wealth — Financial Growth Strategies',
+    speaker: 'Dineo Ledwaba-Chapman — Financial Adviser at Belvedere Wealth Management',
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'Unlock the secrets to building lasting wealth with strategies tailored for Black women aiming to accelerate financial growth and independence.'
+  },
+  {
+    id: 'break1',
+    start: `${DAY}T11:20:00${Z}`,
+    end: `${DAY}T11:30:00${Z}`,
+    title: 'Break & Networking',
+    img: '',
+    desc: 'Short networking break — connect and recharge with peers and mentors.'
+  },
+  {
+    id: 'founders',
+    start: `${DAY}T11:30:00${Z}`,
+    end: `${DAY}T12:15:00${Z}`,
     title: 'Fueling Progress for Black Female Founders',
     speaker: 'Panel: Aneri Pradhan, Cosima Richardson, Leyla F Karaha, Gloria Niiquaye',
-    desc: 'Pathways for scaling Black women-led startups via funding, partnerships and community.' },
-  { id: 'circle', start: `${DAY}T12:15:00${Z}`, end: `${DAY}T13:00:00${Z}`,
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships and community-based approaches.'
+  },
+  {
+    id: 'circle',
+    start: `${DAY}T12:15:00${Z}`,
+    end: `${DAY}T13:00:00${Z}`,
     title: 'Can We Talk for Real? A Sister Circle',
-    speaker: 'Panel: Liz Osumba, Renee Kapuku, Idowu Adesina, Madame Joyce',
-    desc: 'Candid conversation on culture, industry challenges and actionable paths forward.' },
-  { id: 'lunch', start: `${DAY}T13:00:00${Z}`, end: `${DAY}T14:00:00${Z}`,
-    title: 'Lunch & Networking', desc: 'Networking lunch with leaders and peers.' },
-  { id: 'ai', start: `${DAY}T14:00:00${Z}`, end: `${DAY}T15:00:00${Z}`,
-    title: 'AI & Automation: Unlocking Opportunities',
-    speaker: 'Furat Abdulle, Jane Waithira',
-    desc: 'Leverage AI for career growth and inclusive innovation; practical upskilling ideas.' },
-  { id: 'mental', start: `${DAY}T14:00:00${Z}`, end: `${DAY}T15:00:00${Z}`,
-    title: 'Resilience and Rising', speaker: 'Edith Esong Enowbi',
-    desc: 'Prioritising mental health and building resilience in a challenging social climate.' },
-  { id: 'content', start: `${DAY}T14:00:00${Z}`, end: `${DAY}T15:00:00${Z}`,
+    speaker: 'Panel: Liz Osumba (Product Designer, Zalando), Renee Kapuku (Co-Founder, To My Sisters), Idowu Adesina (Senior Product Designer, Zalando), Madame Joyce (Host & Producer)',
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
+  },
+  {
+    id: 'lunch',
+    start: `${DAY}T13:00:00${Z}`,
+    end: `${DAY}T14:00:00${Z}`,
+    title: 'Lunch & Networking',
+    img: '',
+    desc: 'Networking lunch with community leaders and speakers.'
+  },
+  {
+    id: 'ai',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
+    title: 'AI & Automation — Unlocking Opportunities',
+    speaker: 'Furat Abdulle (Consultant, Avanade) · Jane Waithira (Developer, SAP SE)',
+    img: 'xxx',
+    room: 'Room A',
+    desc: 'Explore AI-driven career paths and inclusive innovation with hands-on insights from leading data and automation experts.'
+  },
+  {
+    id: 'mental',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
+    title: 'Resilience & Rising — Prioritising Mental Health',
+    speaker: 'Edith Esong Enowbi — Founder, Roots2Roof Coaching',
+    img: 'xxx',
+    room: 'Room B',
+    desc: 'Why Black women in Europe must prioritise mental health in an increasingly hostile social climate; tools for healing, strength and confidence.'
+  },
+  {
+    id: 'content',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
     title: 'Content Creation & Building Influence',
-    desc: 'Build digital presence and income on LinkedIn, TikTok and beyond.' },
-  { id: 'executive', start: `${DAY}T15:00:00${Z}`, end: `${DAY}T16:00:00${Z}`,
-    title: 'Shattering the Glass Ceiling', speaker: 'Dr. Audrey-Flore Ngomsik',
-    desc: 'Advancing into executive and board roles across Europe.' },
-  { id: 'skills', start: `${DAY}T15:00:00${Z}`, end: `${DAY}T16:00:00${Z}`,
-    title: 'Future-Proof Your Skills', speaker: 'Florence Mottay',
-    desc: 'Future-ready tech skills for 2026 and beyond.' },
-  { id: 'cv', start: `${DAY}T15:00:00${Z}`, end: `${DAY}T16:00:00${Z}`,
+    speaker: 'Various Industry Creators',
+    img: 'xxx',
+    room: 'Room C',
+    desc: 'How to build digital presence and income across LinkedIn, TikTok and beyond — strategies for authentic storytelling and sustainable growth.'
+  },
+  {
+    id: 'executive',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
+    title: 'Shattering the Glass Ceiling — Black Women in Leadership',
+    speaker: 'Dr. Audrey-Flore Ngomsik — Board Advisor & CEO, Trianon Scientific Communication',
+    img: 'xxx',
+    room: 'Room A',
+    desc: 'Pathways for Black women advancing into executive and board roles across Europe; transforming diversity into strategic advantage.'
+  },
+  {
+    id: 'skills',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
+    title: 'Future-Proof Your Skills — Tech Trends for 2026+',
+    speaker: 'Florence Mottay — VP & CISO, Zalando',
+    img: 'xxx',
+    room: 'Room B',
+    desc: 'Explore in-demand digital skills and emerging trends to keep your career resilient and ahead of the curve.'
+  },
+  {
+    id: 'cv',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
     title: 'Crafting CVs & Nailing Interviews',
-    speaker: 'Ibtehal Hussein, Adenike Adekunbi',
-    desc: 'Standout CVs and confident interviews in competitive pipelines.' },
-  { id: 'break2', start: `${DAY}T16:00:00${Z}`, end: `${DAY}T16:15:00${Z}`,
-    title: 'Break', desc: 'Short refresh break before final sessions.' },
-  { id: 'media', start: `${DAY}T16:15:00${Z}`, end: `${DAY}T17:00:00${Z}`,
-    title: 'Thriving in Digital Media',
-    speaker: 'Sally Osei, Leanne Alie, Jade Vanriel, Oluwatoniloba Dreher Adenuga',
-    desc: 'Black women leading the digital content revolution — opportunities and strategy.' },
-  { id: 'closing', start: `${DAY}T17:00:00${Z}`, end: `${DAY}T17:30:00${Z}`,
-    title: 'Closing Keynote Talk', speaker: 'Emamurho Ugherughe',
-    desc: 'Leadership, technology and purpose — closing inspiration.' },
-  { id: 'afterparty', start: `${DAY}T17:30:00${Z}`, end: `${DAY}T19:00:00${Z}`,
-    title: 'After-party!!!', desc: 'Music, joy, community and connection.' }
+    speaker: 'Ibtehal Hussein (Global TA Lead, HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
+    img: 'xxx',
+    room: 'Room C',
+    desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
+  },
+  {
+    id: 'break2',
+    start: `${DAY}T16:00:00${Z}`,
+    end: `${DAY}T16:15:00${Z}`,
+    title: 'Break',
+    img: '',
+    desc: 'Short refresh break before final sessions.'
+  },
+  {
+    id: 'media',
+    start: `${DAY}T16:15:00${Z}`,
+    end: `${DAY}T17:00:00${Z}`,
+    title: 'Thriving in Digital Media — Black Women Leading Change',
+    speaker: 'Panel: Sally Osei (Creator Manager, Zalando), Leanne Alie (Exec Producer, UK), Jade Vanriel (Content Creator), Oluwatoniloba Dreher Adenuga (Model & Poet)',
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'Hear from leading Black women redefining digital media, podcasting and influencer marketing in Europe’s creative industries.'
+  },
+  {
+    id: 'closing',
+    start: `${DAY}T17:00:00${Z}`,
+    end: `${DAY}T17:30:00${Z}`,
+    title: 'Closing Keynote Talk',
+    speaker: 'Emamurho Ugherughe — Global Quality Lead, SAP AI Core Platform',
+    img: 'xxx',
+    room: 'Main Auditorium',
+    desc: 'Leadership, technology and purpose — Emamurho closes the summit with a powerful call to action for innovation and unity.'
+  },
+  {
+    id: 'afterparty',
+    start: `${DAY}T17:30:00${Z}`,
+    end: `${DAY}T19:00:00${Z}`,
+    title: 'After-party!!!',
+    img: 'xxx',
+    desc: 'Music, joy, and celebration — connect, dance, and unwind with community and friends to close the summit.'
+  }
 ];
 
 function fmt(iso){ return new Date(iso).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}); }
