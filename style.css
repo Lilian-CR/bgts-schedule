@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
 .hero h2 {
   font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.75rem;      /* slightly smaller than before */
+  font-size: 1.85rem;      /* slightly smaller than before */
   line-height: 1.1;
   white-space: nowrap;     /* keep single line */
   overflow: hidden;
