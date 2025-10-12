@@ -4,7 +4,7 @@ const $$ = sel => Array.from(document.querySelectorAll(sel));
 const toDate = iso => new Date(iso);
 const DAY = '2025-11-13', Z = '+01:00';
 
-// ===== Schedule Data (shortened for clarity) =====
+// ===== Schedule Data (short sample) =====
 const schedule = [
   { id: 'opening', start: `${DAY}T09:30:00${Z}`, end: `${DAY}T09:45:00${Z}`, title: 'Opening Remarks & Welcome', room: 'Main Auditorium', type: 'Welcome', speaker: 'Chiedza Muguti' },
   { id: 'fireside', start: `${DAY}T09:45:00${Z}`, end: `${DAY}T10:30:00${Z}`, title: 'Fireside Chat — Power in Action', room: 'Main Auditorium', type: 'Fireside', speaker: 'Olamide Olowe' },
@@ -47,7 +47,7 @@ function renderBanner(now) {
     const next = schedule.find(s => toDate(s.start) > now);
     if (next) {
       const mins = Math.round((toDate(next.start) - now) / 60000);
-      banner.innerHTML = `<div class="session"><strong>Up next:</strong> ${next.title} in ${mins} min</div>`;
+      banner.innerHTML = `<div class="session up-next"><strong>Up next:</strong> ${next.title} in ${mins} min</div>`;
     } else banner.innerHTML = '';
   }
 }
