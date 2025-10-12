@@ -85,7 +85,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 .info-grid span { color: #666; }
 .sponsors { font-size: 0.75rem; color: #555; margin-top: 0.35rem; }
 
-/* ====== Live banner (clean, left-aligned, same width as cards) ====== */
+/* ====== Live banner ====== */
 .live-banner {
   max-width: 650px;
   margin: 0.5rem auto 0;
@@ -96,23 +96,26 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   font-family: 'HomeVideo', Arial, sans-serif;
   background: #000;
   color: #fff;
-  text-align: left;            /* now left aligned */
-  padding: 1rem;               /* same padding as sessions */
+  text-align: left;              /* same alignment as sessions */
+  padding: 1rem;
   font-size: 0.9rem;
-  border-radius: 1rem;         /* matches .session border radius */
+  border-radius: 1rem;           /* matches .session */
   line-height: 1.4;
   box-sizing: border-box;
 }
 
+/* clean “UP NEXT” label */
 .live-banner .box strong {
-  color: #fff;
+  all: unset;                  
   display: block;
   font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.15rem;          /* 1–2 sizes bigger */
-  margin-bottom: 0.25rem;
+  font-size: 1.3rem;           
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 0.3rem;
 }
+
 
 /* ====== Schedule ====== */
 .schedule {
