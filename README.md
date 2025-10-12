@@ -31,7 +31,6 @@ This project is entirely **independent** and **non-commercial**.
 </p>
 
 **Lilian Rodrigues**  
-Full-Stack Web Developer · ReDI School Alumna  
-Berlin, Germany  
-
+Aspiring Front-End · Back-End · Full-Stack Developer
+ReDI School Full-Stack Development Alumna — Berlin, Germany
 🔗 [LinkedIn]([https://www.linkedin.com/in/lilian-rodrigues](https://www.linkedin.com/in/lilian-rodrigues-berlin))  
