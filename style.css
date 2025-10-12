@@ -60,7 +60,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 .live-banner .box span.upnext {
   display: block;
   font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.55rem;  /* adjust this number to taste: try 1.25–1.45rem */
+  font-size: 1.75rem; 
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.4rem;
