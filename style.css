@@ -41,15 +41,18 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
 .hero h2 {
   font-family: 'HomeVideoBold', Arial, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.2;
-  white-space: nowrap; /* keep on one line when possible */
+  font-size: 1.55rem;      /* slightly smaller than before */
+  line-height: 1.1;
+  white-space: nowrap;     /* keep single line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* prevent clipping overflow */
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .hero h2 {
-    font-size: 1.3rem;      /* slightly smaller for mobile */
-    white-space: normal;    /* allow wrap only if absolutely needed */
+    font-size: 1.25rem;    /* smaller for phones */
+    white-space: nowrap;   /* still keep in one line */
+    text-overflow: clip;   /* show full text if fits */
   }
 }
 
