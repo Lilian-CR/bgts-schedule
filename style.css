@@ -65,7 +65,12 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   letter-spacing: 0.5px;
   margin-bottom: 0.4rem;
   color: #fff;
+  background: none !important;
   background-color: transparent !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-text-stroke: 0 !important;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   user-select: none;
