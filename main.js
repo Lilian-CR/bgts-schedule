@@ -113,7 +113,7 @@ function renderBanner(now){
     banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
   } else if (next) {
     const mins = Math.round((new Date(next.start) - now) / 60000);
-    banner.innerHTML = `<div class="box"><strong>UP NEXT:</strong><br>${next.title} in ${mins} min</div>`;
+    banner.innerHTML = `<div class="box">UP NEXT:<br>${next.title} in ${mins} min</div>`;
   } else {
     banner.innerHTML = '';
   }
