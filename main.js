@@ -97,10 +97,13 @@ function renderList(){
   }).join('');
   $('#schedule').innerHTML = html;
 
-  // Tap toggles a subtle active state (text always visible)
-  $$('#schedule article').forEach(el => {
-    el.addEventListener('click', () => el.classList.toggle('active'));
+ // Tap toggles a subtle active state (and removes it from others)
+$$('#schedule article').forEach(el => {
+  el.addEventListener('click', () => {
+    $$('#schedule article').forEach(a => a.classList.remove('active'));
+    el.classList.add('active');
   });
+});
 
   renderBanner(now);
 }
