@@ -1,69 +1,96 @@
+/* ====== Fonts ====== */
 @font-face {
   font-family: 'HomeVideo';
   src: url('fonts/homevideo.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'HomeVideoBold';
   src: url('fonts/homevideobold.ttf') format('truetype');
   font-weight: bold;
+  font-display: swap;
 }
 
-/* Base */
+/* ====== Base ====== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { font-family: Arial, sans-serif; background: #f4f4ec; color: #111; }
 img { max-width: 100%; display: block; border-radius: 0.75rem; }
 
-/* Header */
+/* ====== Header (image + small note) ====== */
+.header { max-width: 650px; margin: 0.75rem auto 0; padding: 0 1rem; }
 .header-img { width: 100%; height: auto; border-bottom: 2px solid #000; }
-.notice {
-  font-size: 0.8rem;
-  background: #fff;
-  padding: 0.5rem 1rem;
+.header-note {
+  font-size: 0.75rem;
+  color: #444;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  margin-top: 0.4rem;
 }
+.header-note a { color: #000; text-decoration: underline; }
 
-/* Hero */
-.hero { text-align: center; padding: 1rem; }
-.hero h1 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1.6rem; }
-.subtitle { font-family: Arial, sans-serif; font-size: 0.9rem; color: #555; }
+/* ====== Hero (title + stacked lines with no gaps) ====== */
+.hero { max-width: 650px; margin: 0.5rem auto 0; padding: 0 1rem; text-align: center; }
+.hero h2 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1.6rem; }
+.stack-lines { margin-top: 0.25rem; }
+.stack-lines .line { font-size: 0.9rem; line-height: 1.15rem; }
+.stack-lines .line + .line { margin-top: 0; } /* no extra space */
+.stack-lines a { color: #000; text-decoration: underline; }
 
-/* Meta info */
-.meta { max-width: 650px; margin: 1rem auto; text-align: center; font-size: 0.85rem; }
-.meta a { color: #000; text-decoration: underline; }
-.info-grid { display: flex; justify-content: space-around; margin: 0.5rem 0; }
-.info-grid div { background: #fff; border-radius: 0.5rem; padding: 0.5rem; font-size: 0.8rem; }
-.sponsors { font-size: 0.75rem; color: #555; }
+/* ====== Meta ====== */
+.meta { max-width: 650px; margin: 0.6rem auto; padding: 0 1rem; text-align: center; font-size: 0.85rem; }
+.info-grid { display: flex; justify-content: space-around; gap: 0.5rem; margin-top: 0.4rem; }
+.info-grid div { background: #fff; border-radius: 0.5rem; padding: 0.5rem; font-size: 0.8rem; border: 1px solid #e6e6e6; }
+.info-grid span { color: #666; }
+.sponsors { font-size: 0.75rem; color: #555; margin-top: 0.35rem; }
 
-/* Live banner */
+/* ====== Live banner (same width and look as cards) ====== */
 .live-banner {
+  max-width: 650px;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+}
+.live-banner .box {
   font-family: 'HomeVideo', Arial, sans-serif;
-  background: #000; color: #fff; text-align: center;
-  padding: 0.6rem; font-size: 0.9rem; margin: 0.5rem auto;
-  border-radius: 0.5rem; max-width: 650px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 0.75rem;
 }
 
-/* Schedule */
-.schedule { max-width: 650px; margin: 1rem auto 5rem; padding: 0 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+/* ====== Schedule ====== */
+.schedule {
+  max-width: 650px;
+  margin: 0.5rem auto 2.25rem; /* smaller bottom gap before footer */
+  padding: 0 1rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
 .session {
-  background: #fff; border: 1px solid #ddd; border-radius: 1rem;
-  padding: 1rem; cursor: pointer; transition: all 0.2s ease-in-out;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 .session:hover { background: #f9f9f9; }
+.session.active { background: #f2f2f2; border-color: #cfcfcf; } /* tap color */
 .session.current { border-color: #000; }
 .session h3 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1rem; margin-bottom: 0.3rem; }
-.session small { font-size: 0.75rem; color: #666; }
-.session .desc { display: none; margin-top: 0.5rem; font-size: 0.8rem; color: #333; }
-.session.open .desc { display: block; }
+.session small { font-size: 0.75rem; color: #666; display: block; }
+.session .desc { margin-top: 0.5rem; font-size: 0.85rem; color: #333; } /* always visible */
 .session img { width: 100%; margin-top: 0.5rem; border-radius: 0.5rem; }
+.live-tag {
+  background: #000; color: #fff; font-size: 0.65rem;
+  padding: 0.15rem 0.35rem; border-radius: 0.5rem; margin-left: 0.4rem;
+}
 
-/* Footer */
-.footer { max-width: 650px; margin: 2rem auto 5rem; text-align: center; padding: 1rem; }
-.footer-title { font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-.footer-time { font-size: 0.85rem; margin: 0.3rem 0; }
-.author { margin-top: 2rem; font-size: 0.8rem; color: #333; }
+/* ====== Footer (author only) ====== */
+.footer { max-width: 650px; margin: 0.5rem auto 5rem; padding: 0 1rem; text-align: center; }
+.author { font-size: 0.8rem; color: #333; }
+.author a { color: #000; text-decoration: underline; }
 
-/* Bottom nav */
+/* ====== Bottom nav ====== */
 .bottom-nav {
   position: fixed; bottom: 1rem; left: 0; right: 0;
   display: flex; justify-content: center; gap: 0.4rem;
