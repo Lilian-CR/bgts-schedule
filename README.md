@@ -3,7 +3,7 @@
 This simple website was created to help attendees follow the Black Girls Tech Summit 2025: The Shift — Power, Progress & Possibility in real time.
 It highlights the session currently taking place and greys out past ones, making it easier to keep track of what’s happening throughout the day — even offline.
 
-#About the Project
+<b>About the Project</>
 
 This is a small front-end project built with HTML, CSS, and JavaScript, without any backend or commercial purpose.
 It was made as a learning exercise and a community contribution — to be useful during the event and showcase practical skills learned at ReDI School of Digital Integration, where I completed the Full-Stack Web Development Bootcamp.
