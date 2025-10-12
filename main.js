@@ -201,8 +201,8 @@ function renderList(){
       <article id="${s.id}" class="${cls}">
         <h3>${s.title}${isCurrent ? '<span class="live-tag">LIVE</span>' : ''}</h3>
         <small>${fmt(s.start)}–${fmt(s.end)}${s.speaker ? ` · ${s.speaker}` : ''}</small>
-        ${imgHTML}
         <p class="desc">${s.desc}</p>
+        ${imgHTML}
       </article>`;
   }).join('');
   $('#schedule').innerHTML = html;
