@@ -75,12 +75,10 @@ const schedule = [
     title: 'After-party!!!', desc: 'Music, joy, community and connection.' }
 ];
 
-// ---- Helpers ----
 function fmt(iso){ return new Date(iso).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}); }
 function within(now, s, e){ return now >= new Date(s) && now < new Date(e); }
 function past(now, e){ return now >= new Date(e); }
 
-// ---- Render ----
 function renderList(){
   const now = getNowMs();
   const html = schedule.map(s => {
@@ -96,7 +94,6 @@ function renderList(){
   }).join('');
   $('#schedule').innerHTML = html;
 
-  // Tap toggles subtle active state
   $$('#schedule article').forEach(el => {
     el.addEventListener('click', () => {
       $$('#schedule article').forEach(a => a.classList.remove('active'));
