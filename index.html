@@ -6,38 +6,30 @@
   <title>Black Girls Tech Summit 2025 — Live Schedule</title>
   <meta name="theme-color" content="#f4f4ec" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="fonts/homevideo.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/homevideobold.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="header-inner">
-      <div class="logo">BG</div>
-      <div class="title">
-        <h1>Black Girls Tech Summit 2025</h1>
-        <p>The Shift — Power, Progress &amp; Possibility</p>
-      </div>
-      <button id="jumpNowBtn" class="btn-small">Now</button>
-    </div>
+    <img src="images/header-banner.jpg" alt="Black Girls Tech Summit Banner" class="header-img">
+    <p class="notice">
+      🖤 This site is an independent student project made for attendees. 
+      For any official schedule updates, please visit 
+      <a href="https://www.blackgirlstechsummit.com/" target="_blank">blackgirlstechsummit.com</a>.
+    </p>
   </header>
 
-  <!-- Official Banner -->
-  <section class="official-banner">
-    <img src="images/bgts-header.jpg" alt="Black Girls Tech Summit 2025 banner" />
-    <p class="official-text">
-      This site is an <strong>unofficial schedule</strong> created by a ReDI School alumna to help attendees follow the event.  
-      For official updates, please visit the 
-      <a href="https://www.blackgirlstechsummit.com/" target="_blank">
-        Black Girls Tech Summit official website
-      </a>.
-    </p>
+  <!-- Title -->
+  <section class="hero">
+    <h1>Black Girls Tech Summit 2025</h1>
+    <p class="subtitle">The Shift — Power, Progress &amp; Possibility</p>
   </section>
 
-  <!-- Meta / Hero -->
+  <!-- Meta -->
   <section class="meta">
-    <div>
-      <p>Thu, 13 Nov 2025 · Zalando BHW · Berlin</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Hedwig-Wachenheim-Stra%C3%9Fe+7+10243+Berlin" target="_blank">📍 Map</a>
-    </div>
+    <p>Thu, 13 Nov 2025 · Zalando BHW · Berlin</p>
+    <a href="https://www.google.com/maps/search/?api=1&query=Hedwig-Wachenheim-Stra%C3%9Fe+7+10243+Berlin" target="_blank">📍 Get Directions</a>
     <div class="info-grid">
       <div><span>Doors</span><strong>09:00</strong></div>
       <div><span>Wrap</span><strong>19:00</strong></div>
@@ -46,7 +38,7 @@
     <p class="sponsors">Headline: Zalando · Silver: SAP SE</p>
   </section>
 
-  <!-- Live banner -->
+  <!-- Live Banner -->
   <div id="liveBanner" class="live-banner" aria-live="polite"></div>
 
   <!-- Schedule -->
@@ -55,23 +47,21 @@
   <!-- Footer -->
   <footer class="footer">
     <div>
-      <div class="footer-label">After-party</div>
-      <div class="footer-time">17:30 – 19:00</div>
+      <p class="footer-title">After-party</p>
+      <p class="footer-time">17:30 – 19:00</p>
       <p>Build meaningful connections — music, fun &amp; drinks.</p>
     </div>
-
-    <div class="footer-bio">
+    <div class="author">
       <p><strong>Lilian Rodrigues</strong><br>
       Aspiring Front-End · Back-End · Full-Stack Developer<br>
-      ReDI School Full-Stack Development Alumna — Berlin, Germany</p>
-      <a href="https://www.linkedin.com/in/lilian-rodrigues" target="_blank">LinkedIn</a>
+      ReDI School Full-Stack Development Alumna — Berlin, Germany<br>
+      <a href="https://www.linkedin.com/in/lilianrodriguesdev" target="_blank">LinkedIn</a></p>
     </div>
   </footer>
 
-  <!-- Bottom nav -->
   <nav class="bottom-nav">
     <button id="showAll" class="btn-main">All</button>
-    <button id="showCurrent" class="btn-alt">Current</button>
+    <button id="showCurrent" class="btn-alt">Now</button>
     <button id="scrollTop" class="btn-alt">Top</button>
   </nav>
 
