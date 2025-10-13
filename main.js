@@ -110,12 +110,23 @@ function fmt(iso) {
 function within(now, s, e) { return now >= new Date(s) && now < new Date(e); }
 function past(now, e) { return now >= new Date(e); }
 
-function renderList(showNowOnly = false) {
+// persist current filter mode
+let showNowOnlyState = false;
+
+function renderList(showNowOnly = showNowOnlyState) {
+  showNowOnlyState = showNowOnly; // persist
+
   const now = getNowMs();
+  const nextSession = schedule.find(s => new Date(s.start) > now);
+
   const html = schedule.map(s => {
     const isCurrent = within(now, s.start, s.end);
     const isPast = past(now, s.end);
-    const cls = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
+    const isNext = nextSession && s.id === nextSession.id;
+
+    // auto-expand current and next by default
+    const base = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
+    const cls = (isCurrent || isNext) ? `${base} expanded` : base;
 
     let imgHTML = '';
     if (Array.isArray(s.img)) {
@@ -132,7 +143,7 @@ function renderList(showNowOnly = false) {
       <article id="${s.id}" class="${cls}">
         <div class="session-header">
           <h3>${s.title}${isCurrent ? '<span class="live-tag">LIVE</span>' : ''}</h3>
-          <button class="toggle-arrow" aria-label="Toggle details">▼</button>
+          <button class="toggle-arrow" aria-label="Toggle details" aria-expanded="${cls.includes('expanded') ? 'true' : 'false'}">▼</button>
         </div>
         <small>${fmt(s.start)}–${fmt(s.end)}${s.speaker ? ` · ${s.speaker}` : ''}</small>
         <div class="session-body">
@@ -150,18 +161,30 @@ function renderList(showNowOnly = false) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       el.classList.toggle('expanded');
-      btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
+      const expanded = el.classList.contains('expanded');
+      btn.textContent = expanded ? '▲' : '▼';
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
 
+    // Also expand/collapse when clicking anywhere on the box (except the button)
     el.addEventListener('click', (e) => {
       if (!e.target.classList.contains('toggle-arrow')) {
         el.classList.toggle('expanded');
-        btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
+        const expanded = el.classList.contains('expanded');
+        btn.textContent = expanded ? '▲' : '▼';
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       }
     });
   });
 
   renderBanner(now);
+
+  // Ensure video visibility matches current mode (even after auto refresh)
+  const vid = document.querySelector('.event-video');
+  if (vid) {
+    if (showNowOnlyState) vid.classList.add('hidden');
+    else vid.classList.remove('hidden');
+  }
 }
 
 // ---- Banner logic ----
@@ -183,17 +206,19 @@ function renderBanner(now) {
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
   $('#tzLabel').textContent = 'CET (UTC+1)';
-  renderList();
-  setInterval(renderList, 30000);
+  renderList(showNowOnlyState);
+
+  // keep the current filter (All/Now) on auto refresh
+  setInterval(() => renderList(showNowOnlyState), 30000);
 
   $('#showAll').onclick = () => {
-    renderList(false);
-    document.querySelector('.event-video')?.classList.remove('hidden');
+    showNowOnlyState = false;
+    renderList(showNowOnlyState);
   };
 
   $('#showCurrent').onclick = () => {
-    renderList(true);
-    document.querySelector('.event-video')?.classList.add('hidden');
+    showNowOnlyState = true;
+    renderList(showNowOnlyState);
   };
 
   $('#scrollTop').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
