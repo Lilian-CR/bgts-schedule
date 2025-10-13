@@ -78,6 +78,7 @@ const schedule = [
     start: `${DAY}T13:00:00${Z}`,
     end: `${DAY}T14:00:00${Z}`,
     title: 'LLunch Break',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_800/B4EZnHoDhnIoAg-/0/1759990791356?e=1762992000&v=beta&t=lqmsUhYMJ9wT4tnDWtYBVQRdudm1Rap7n2ong983Sns'
     desc: 'Lunch & Networking with leaders in technology and corporate.'
   },
   {
@@ -129,10 +130,9 @@ const schedule = [
     id: 'cv',
     start: `${DAY}T15:00:00${Z}`,
     end: `${DAY}T16:00:00${Z}`,
-    title: 'Crafting CVs & Nailing Interviews',
+    title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
     speaker: 'Ibtehal Hussein (Global TA Lead, HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
     img: 'https://media.licdn.com/dms/image/v2/D4D22AQE9MkUr4xFOSA/feedshare-shrink_1280/B4DZm1i_TMJYAs-/0/1759687473190?e=1762992000&v=beta&t=-1Iv3O8klCnZaVCYQd731zCaAnadySFRIJ9E7rbsUDk',
-    room: 'Room C',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
   {
@@ -140,17 +140,15 @@ const schedule = [
     start: `${DAY}T16:00:00${Z}`,
     end: `${DAY}T16:15:00${Z}`,
     title: 'Break',
-    img: '',
     desc: 'Short refresh break before final sessions.'
   },
   {
     id: 'media',
     start: `${DAY}T16:15:00${Z}`,
     end: `${DAY}T17:00:00${Z}`,
-    title: 'Thriving in Digital Media — Black Women Leading Change',
+    title: 'Panel Discussion - Thriving in Digital Media: Black Women Leading the Future of Content and Innovation',
     speaker: 'Panel: Sally Osei (Creator Manager, Zalando), Leanne Alie (Exec Producer, UK), Jade Vanriel (Content Creator), Oluwatoniloba Dreher Adenuga (Model & Poet)',
-    img: 'xxx',
-    room: 'Main Auditorium',
+    img: 'https://media.licdn.com/dms/image/v2/D4D22AQE9MkUr4xFOSA/feedshare-shrink_1280/B4DZm1i_TMJYAs-/0/1759687473190?e=1762992000&v=beta&t=-1Iv3O8klCnZaVCYQd731zCaAnadySFRIJ9E7rbsUDk',
     desc: 'Hear from leading Black women redefining digital media, podcasting and influencer marketing in Europe’s creative industries.'
   },
   {
@@ -159,17 +157,16 @@ const schedule = [
     end: `${DAY}T17:30:00${Z}`,
     title: 'Closing Keynote Talk',
     speaker: 'Emamurho Ugherughe — Global Quality Lead, SAP AI Core Platform',
-    img: 'xxx',
-    room: 'Main Auditorium',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68c8322a9bfcdd3837d51543_IMG_2779.jpg',
     desc: 'Leadership, technology and purpose — Emamurho closes the summit with a powerful call to action for innovation and unity.'
   },
   {
     id: 'afterparty',
     start: `${DAY}T17:30:00${Z}`,
     end: `${DAY}T19:00:00${Z}`,
-    title: 'After-party!!!',
-    img: 'xxx',
-    desc: 'Music, joy, and celebration — connect, dance, and unwind with community and friends to close the summit.'
+    title: 'The After-party!!!',
+    img: 'https://media.gettyimages.com/id/1145839324/de/foto/teamapplaus-nach-treffen.jpg?s=612x612&w=0&k=20&c=DUXDVXxSIy5bD5srD04rXfwOibbsagjpNEgD79pqzaY=',
+    desc: 'Join us for building meaningful connections, great music, fun and drinks! - Unwind with community and friends to close the summit.'
   }
 ];
 
