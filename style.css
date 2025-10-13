@@ -134,36 +134,44 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   object-position: center;
   }
 
-/* Past sessions - faded & grayscale look */
+/* Collapsed past sessions */
 .session.past {
   background: #f1f1f1;
   color: #777;
-  opacity: 0.6;
-  pointer-events: none; /* disables click */
+  opacity: 0.7;
   border-color: #ccc;
-  transition: none;
+  overflow: hidden;
+  max-height: 4.5rem; /* only shows title + small line */
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-/* Past session text and tags */
 .session.past h3,
-.session.past small,
-.session.past .desc {
-  color: #777;
+.session.past small {
+  color: #666;
 }
 
-/* Past session images */
+.session.past .desc,
+.session.past .speaker-pic {
+  display: none;
+}
+
+/* When expanded (clicked) */
+.session.past.expanded {
+  max-height: 1000px; /* plenty of room */
+  opacity: 1;
+  background: #fafafa;
+}
+
+.session.past.expanded .desc,
+.session.past.expanded .speaker-pic {
+  display: block;
+}
+
 .session.past .speaker-pic {
   filter: grayscale(100%) brightness(0.9);
-  opacity: 0.7;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
 }
-
-/* Prevent hover highlighting for past */
-.session.past:hover {
-  background: #f1f1f1;
-  transform: none;
-}
-
 
 /* Footer */
 .footer {
