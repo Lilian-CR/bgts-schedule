@@ -188,7 +188,14 @@ function renderList(){
     const isCurrent = within(now, s.start, s.end);
     const isPast = past(now, s.end);
     const cls = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
-    const imgHTML = s.img ? `<img class="speaker-pic" src="${s.img}" alt="${s.speaker || s.title}">` : '';
+    let imgHTML = '';
+if (Array.isArray(s.img)) {
+  imgHTML = s.img.map(url =>
+    `<img class="speaker-pic" src="${url}" alt="${s.speaker || s.title}">`
+  ).join('');
+} else if (s.img) {
+  imgHTML = `<img class="speaker-pic" src="${s.img}" alt="${s.speaker || s.title}">`;
+}
     return `
       <article id="${s.id}" class="${cls}">
         <h3>${s.title}${isCurrent ? '<span class="live-tag">LIVE</span>' : ''}</h3>
