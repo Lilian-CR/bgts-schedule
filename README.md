@@ -12,6 +12,7 @@ It highlights the session currently taking place and greys out past ones, making
 ## About the Project
 
 This is a small front-end project built with **HTML**, **CSS**, and **JavaScript**, without any backend or commercial purpose.  
+
 It was made as a learning exercise and a community contribution — to be useful during the event and to showcase practical skills learned at **ReDI School of Digital Integration**, where I completed the **Full-Stack Web Development Bootcamp**.
 
 I’m currently attending the 2025 **Black Girls Tech Summit** as a participant, not an organiser or sponsor.  
