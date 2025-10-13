@@ -53,6 +53,8 @@ const schedule = [
     start: `${DAY}T11:20:00${Z}`,
     end: `${DAY}T11:30:00${Z}`,
     title: 'Break & Networking',
+    img: 'https://media.gettyimages.com/id/1442269395/photo/two-businesswomen-walking-down-the-coworking-stairs.jpg?s=612x612&w=0&k=20&c=uTw48PtN1OcWEz1D_-jgFLzVuqJVSuFOR1O2Q7ptZYo=',
+    img: 'https://media.gettyimages.com/id/1634161872/photo/young-adult-black-woman-having-coffee-break-at-the-office.jpg?s=612x612&w=0&k=20&c=SnVFYLo71c_VXX9zXk_TU5eme8f6d_ExAxH9rU4WHBw=',
     desc: 'Short networking break — connect and recharge with peers and mentors.'
   },
   {
@@ -166,6 +168,7 @@ const schedule = [
     end: `${DAY}T19:00:00${Z}`,
     title: 'The After-party!!!',
     img: 'https://media.gettyimages.com/id/1145839324/de/foto/teamapplaus-nach-treffen.jpg?s=612x612&w=0&k=20&c=DUXDVXxSIy5bD5srD04rXfwOibbsagjpNEgD79pqzaY=',
+    img: 'https://t3.ftcdn.net/jpg/02/59/72/50/360_F_259725004_ZXZZe3fAcLY7e72W4cogM8JmLfVN11jQ.jpg',
     desc: 'Join us for building meaningful connections, great music, fun and drinks! - Unwind with community and friends to close the summit.'
   }
 ];
