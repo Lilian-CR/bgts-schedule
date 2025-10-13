@@ -132,7 +132,7 @@ const schedule = [
     end: `${DAY}T16:00:00${Z}`,
     title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
     speaker: 'Ibtehal Hussein (Global TA Lead, HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
-    img: 'https://media.licdn.com/dms/image/v2/D4D22AQE9MkUr4xFOSA/feedshare-shrink_1280/B4DZm1i_TMJYAs-/0/1759687473190?e=1762992000&v=beta&t=-1Iv3O8klCnZaVCYQd731zCaAnadySFRIJ9E7rbsUDk',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613?e=1762992000&v=beta&t=wQtz2W5njYntVNfS-reJeRpsyVLKlgtoYibEJ8lpBhY',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
   {
