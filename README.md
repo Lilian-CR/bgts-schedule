@@ -1,3 +1,6 @@
+<p align="lcenter">
+  <img src="./images/main-read_me.png" alt="Author Pic" width="600"/>
+</p>
 # 🖤 **Black Girls Tech Summit 2025 — Live Schedule** 🖤
 
 This simple website was created to help attendees follow the **Black Girls Tech Summit 2025: The Shift — Power, Progress & Possibility** in real time.  
