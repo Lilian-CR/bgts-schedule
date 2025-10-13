@@ -127,6 +127,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 /* Special rule: make Lunch and After-party photos use a 16:9 ratio */
 #lunch .speaker-pic,
 #break1 .speaker-pic,
+#break2 .speaker-pic,
 #afterparty .speaker-pic {
   aspect-ratio: 16 / 9;
   object-fit: cover;
