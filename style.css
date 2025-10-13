@@ -226,9 +226,24 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 }
 
 /* Footer */
-.footer { max-width: 650px; margin: 0.5rem auto 5rem; padding: 0 1rem; text-align: center; }
-.author { font-size: 0.8rem; color: #333; }
-.author a { color: #000; text-decoration: underline; }
+.footer {
+  max-width: 650px;
+  margin: 0.5rem auto 5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.author {
+  font-size: 0.7rem;     /* smaller than before */
+  line-height: 1.4;      /* easier to read */
+  color: #555;           /* softer tone */
+}
+
+.author a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 /* Bottom Nav */
 .bottom-nav {
