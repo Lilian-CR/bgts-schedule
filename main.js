@@ -62,7 +62,7 @@ const schedule = [
     end: `${DAY}T12:15:00${Z}`,
     title: 'Panel Discussion – Fueling Progress for Black Female Founders',
     speaker: 'Aneri Pradhan, Cosima Richardson, Leyla F Karaha, Gloria Niiquaye',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships, and community-based approaches.'
   },
   {
@@ -71,7 +71,7 @@ const schedule = [
     end: `${DAY}T13:00:00${Z}`,
     title: 'Panel Discussion – Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
     speaker: 'Liz Osumba, Renee Kapuku, Idowu Adesina, Madame Joyce',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
   },
   {
@@ -88,7 +88,7 @@ const schedule = [
     end: `${DAY}T15:00:00${Z}`,
     title: '1. AI & Automation: Unlocking Opportunities for Black Women in Tech',
     speaker: 'Furat Abdulle (Avanade) · Jane Waithira (SAP SE)',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'Explore AI-driven career paths and inclusive innovation with hands-on insights from leading data and automation experts.'
   },
   {
@@ -106,7 +106,7 @@ const schedule = [
     end: `${DAY}T15:00:00${Z}`,
     title: '3. Content Creation & Building Influence: How Black Women Can Lead Conversations on LinkedIn & TikTok',
     speaker: 'Various Industry Creators',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'How to build digital presence and income across LinkedIn, TikTok and beyond — strategies for authentic storytelling and sustainable growth.'
   },
   {
@@ -133,7 +133,7 @@ const schedule = [
     end: `${DAY}T16:00:00${Z}`,
     title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
     speaker: 'Ibtehal Hussein (HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
   {
@@ -150,7 +150,7 @@ const schedule = [
     end: `${DAY}T17:00:00${Z}`,
     title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content & Innovation',
     speaker: 'Sally Osei, Leanne Alie, Jade Vanriel, Oluwatoniloba Dreher Adenuga',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'Hear from leading Black women redefining digital media, podcasting, and influencer marketing in Europe’s creative industries.'
   },
   {
