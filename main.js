@@ -43,7 +43,7 @@ const schedule = [
     id: 'wealth',
     start: `${DAY}T10:30:00${Z}`,
     end: `${DAY}T11:15:00${Z}`,
-    title: 'WORKSHOP: Level Up Your Wealth: Black Women´s Strategy for Financial Growth and Wealth Generation',
+    title: '"WORKSHOP: Level Up Your Wealth - Black Women´s Strategy for Financial Growth and Wealth Generation',
     speaker: 'Dineo Ledwaba-Chapman — Financial Adviser at Belvedere Wealth Management',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68b0c3931b97d76faef7ede6_Dineo%20-%20Photo.jpg',
     desc: 'Unlock the secrets to building lasting wealth with strategies tailored for Black women aiming to accelerate financial growth and independence.'
@@ -73,7 +73,7 @@ const schedule = [
     start: `${DAY}T12:15:00${Z}`,
     end: `${DAY}T13:00:00${Z}`,
     title: 'Panel Discussion - Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
-    speaker: 'PLiz Osumba (Product Designer, Zalando), Renee Kapuku (Co-Founder, To My Sisters), Idowu Adesina (Senior Product Designer, Zalando), Madame Joyce (Host & Producer)',
+    speaker: 'Liz Osumba (Product Designer, Zalando), Renee Kapuku (Co-Founder, To My Sisters), Idowu Adesina (Senior Product Designer, Zalando), Madame Joyce (Host & Producer)',
     img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613?e=1762992000&v=beta&t=wQtz2W5njYntVNfS-reJeRpsyVLKlgtoYibEJ8lpBhY',
     desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
   },
