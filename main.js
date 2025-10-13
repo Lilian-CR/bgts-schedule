@@ -62,7 +62,7 @@ const schedule = [
     end: `${DAY}T12:15:00${Z}`,
     title: 'Panel Discussion – Fueling Progress for Black Female Founders',
     speaker: 'Aneri Pradhan, Cosima Richardson, Leyla F Karaha, Gloria Niiquaye',
-    img: 'images/Cosima Richardson_Credit Tatsiana Tribunalova.jpg',
+    img: 'images/Aneri_Pradhan-Cosima_Richardson-Leyla_F_Karaha-Gloria_Niiquaye.jpg',
     desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships, and community-based approaches.'
   },
   {
