@@ -161,6 +161,35 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   object-position: center;
 }
 
+/* Session Header + Arrow */
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-arrow {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s ease;
+}
+
+.session.expanded .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.session-body {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.session.expanded .session-body {
+  display: block;
+}
+
 /* Collapsed past sessions */
 .session.past {
   background: #f1f1f1;
@@ -168,7 +197,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   opacity: 0.7;
   border-color: #ccc;
   overflow: hidden;
-  max-height: 4.5rem; /* only shows title + small line */
+  max-height: 4.5rem;
   transition: all 0.4s ease;
   cursor: pointer;
 }
@@ -183,9 +212,8 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   display: none;
 }
 
-/* When expanded (clicked) */
 .session.past.expanded {
-  max-height: 1000px; /* plenty of room */
+  max-height: 1000px;
   opacity: 1;
   background: #fafafa;
 }
@@ -198,6 +226,11 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 .session.past .speaker-pic {
   filter: grayscale(100%) brightness(0.9);
   opacity: 0.8;
+}
+
+/* Hide video on NOW mode */
+.hidden {
+  display: none !important;
 }
 
 /* Footer */
