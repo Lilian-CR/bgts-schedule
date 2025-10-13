@@ -1,4 +1,4 @@
-// Helpers
+// ---------------- Helpers ----------------
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 const DAY = '2025-11-13', Z = '+01:00';
@@ -19,7 +19,7 @@ function getNowMs() {
   return Date.now();
 }
 
-// ---- Schedule data ----
+// ---------------- Schedule Data ----------------
 const schedule = [
   {
     id: 'opening',
@@ -34,7 +34,7 @@ const schedule = [
     id: 'fireside',
     start: `${DAY}T09:45:00${Z}`,
     end: `${DAY}T10:30:00${Z}`,
-    title: 'Fireside Chat — Power in Action: Leading the Change and Shaping the Future for Black women',
+    title: 'Fireside Chat — Power in Action: Leading the Change and Shaping the Future for Black Women',
     speaker: 'Olamide Olowe — Founder & CEO of Topicals',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68e3cd4f71d2601a907dfd9e_image_50405121%20(2).JPG',
     desc: 'A conversation with Forbes 30 Under 30 entrepreneur Olamide Olowe on leadership, resilience, and driving systemic change in beauty and business.'
@@ -43,7 +43,7 @@ const schedule = [
     id: 'wealth',
     start: `${DAY}T10:30:00${Z}`,
     end: `${DAY}T11:15:00${Z}`,
-    title: 'WORKSHOP: Level Up Your Wealth - Black Women´s Strategy for Financial Growth and Wealth Generation',
+    title: 'WORKSHOP: Level Up Your Wealth – Black Women’s Strategy for Financial Growth and Wealth Generation',
     speaker: 'Dineo Ledwaba-Chapman — Financial Adviser at Belvedere Wealth Management',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68b0c3931b97d76faef7ede6_Dineo%20-%20Photo.jpg',
     desc: 'Unlock the secrets to building lasting wealth with strategies tailored for Black women aiming to accelerate financial growth and independence.'
@@ -60,18 +60,18 @@ const schedule = [
     id: 'founders',
     start: `${DAY}T11:30:00${Z}`,
     end: `${DAY}T12:15:00${Z}`,
-    title: 'Panel Discussion - Fueling Progress for Black Female Founders',
+    title: 'Panel Discussion – Fueling Progress for Black Female Founders',
     speaker: 'Aneri Pradhan, Cosima Richardson, Leyla F Karaha, Gloria Niiquaye',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613?e=1762992000&v=beta&t=wQtz2W5njYntVNfS-reJeRpsyVLKlgtoYibEJ8lpBhY',
-    desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships and community-based approaches.'
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships, and community-based approaches.'
   },
   {
     id: 'circle',
     start: `${DAY}T12:15:00${Z}`,
     end: `${DAY}T13:00:00${Z}`,
-    title: 'Panel Discussion - Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
-    speaker: 'Liz Osumba (Product Designer, Zalando), Renee Kapuku (Co-Founder, To My Sisters), Idowu Adesina (Senior Product Designer, Zalando), Madame Joyce (Host & Producer)',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613?e=1762992000&v=beta&t=wQtz2W5njYntVNfS-reJeRpsyVLKlgtoYibEJ8lpBhY',
+    title: 'Panel Discussion – Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
+    speaker: 'Liz Osumba, Renee Kapuku, Idowu Adesina, Madame Joyce',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
     desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
   },
   {
@@ -79,8 +79,62 @@ const schedule = [
     start: `${DAY}T13:00:00${Z}`,
     end: `${DAY}T14:00:00${Z}`,
     title: 'Lunch Break',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_800/B4EZnHoDhnIoAg-/0/1759990791356?e=1762992000&v=beta&t=lqmsUhYMJ9wT4tnDWtYBVQRdudm1Rap7n2ong983Sns',
-    desc: 'Lunch & Networking with leaders in technology and corporate.'
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_800/B4EZnHoDhnIoAg-/0/1759990791356',
+    desc: 'Lunch & networking with leaders in technology and corporate.'
+  },
+  {
+    id: 'ai',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
+    title: '1. AI & Automation: Unlocking Opportunities for Black Women in Tech',
+    speaker: 'Furat Abdulle (Avanade) · Jane Waithira (SAP SE)',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    desc: 'Explore AI-driven career paths and inclusive innovation with hands-on insights from leading data and automation experts.'
+  },
+  {
+    id: 'mental',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
+    title: '2. Resilience and Rising: Prioritising Mental Health in a Racist and Rising Fascist Society',
+    speaker: 'Edith Esong Enowbi — Founder, Roots2Roof Coaching',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/685bb8c1240484e7801d8fc2_Edith%20Esong%20Enowbi.jpg',
+    desc: 'Why Black women in Europe must prioritise mental health in an increasingly hostile social climate; tools for healing, strength and confidence.'
+  },
+  {
+    id: 'content',
+    start: `${DAY}T14:00:00${Z}`,
+    end: `${DAY}T15:00:00${Z}`,
+    title: '3. Content Creation & Building Influence: How Black Women Can Lead Conversations on LinkedIn & TikTok',
+    speaker: 'Various Industry Creators',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    desc: 'How to build digital presence and income across LinkedIn, TikTok and beyond — strategies for authentic storytelling and sustainable growth.'
+  },
+  {
+    id: 'executive',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
+    title: '1. Shattering the Glass Ceiling: Black Women Leading in Executive & Board Roles',
+    speaker: 'Dr. Audrey-Flore Ngomsik — CEO, Trianon Scientific Communication',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68be85de6d671f8ef1cb4ef7_Dr%20Audrey-Flore%20Ngomsik%20(3)-min.jpg',
+    desc: 'Pathways for Black women advancing into executive and board roles across Europe; transforming diversity into strategic advantage.'
+  },
+  {
+    id: 'skills',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
+    title: '2. Future-Proof Your Skills: Tech Trends & Skills Every Black Woman Needs in 2026 and Beyond',
+    speaker: 'Florence Mottay — VP & CISO, Zalando',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68be862a9cdf82cd18e08af8_Florence_Mottay_03.jpg',
+    desc: 'Explore in-demand digital skills and emerging trends to keep your career resilient and ahead of the curve.'
+  },
+  {
+    id: 'cv',
+    start: `${DAY}T15:00:00${Z}`,
+    end: `${DAY}T16:00:00${Z}`,
+    title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
+    speaker: 'Ibtehal Hussein (HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
   {
     id: 'break2',
@@ -91,6 +145,24 @@ const schedule = [
     desc: 'Short refresh break before final sessions — grab a coffee, relax, and prepare for the last talks.'
   },
   {
+    id: 'media',
+    start: `${DAY}T16:15:00${Z}`,
+    end: `${DAY}T17:00:00${Z}`,
+    title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content & Innovation',
+    speaker: 'Sally Osei, Leanne Alie, Jade Vanriel, Oluwatoniloba Dreher Adenuga',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613',
+    desc: 'Hear from leading Black women redefining digital media, podcasting, and influencer marketing in Europe’s creative industries.'
+  },
+  {
+    id: 'closing',
+    start: `${DAY}T17:00:00${Z}`,
+    end: `${DAY}T17:30:00${Z}`,
+    title: 'Closing Keynote Talk',
+    speaker: 'Emamurho Ugherughe — Global Quality Lead, SAP AI Core Platform',
+    img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68c8322a9bfcdd3837d51543_IMG_2779.jpg',
+    desc: 'Leadership, technology and purpose — Emamurho closes the summit with a powerful call to action for innovation and unity.'
+  },
+  {
     id: 'afterparty',
     start: `${DAY}T17:30:00${Z}`,
     end: `${DAY}T19:00:00${Z}`,
@@ -99,35 +171,23 @@ const schedule = [
       'https://media.gettyimages.com/id/1145839324/de/foto/teamapplaus-nach-treffen.jpg?s=612x612&w=0&k=20&c=DUXDVXxSIy5bD5srD04rXfwOibbsagjpNEgD79pqzaY=',
       'https://t3.ftcdn.net/jpg/02/59/72/50/360_F_259725004_ZXZZe3fAcLY7e72W4cogM8JmLfVN11jQ.jpg'
     ],
-    desc: 'Join us for building meaningful connections, great music, fun and drinks! - Unwind with community and friends to close the summit.'
+    desc: 'Join us for building meaningful connections, great music, fun and drinks! Unwind with community and friends to close the summit.'
   }
 ];
 
-// ---- Time & render logic ----
+// ---------------- Render Logic ----------------
 function fmt(iso) {
   return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 function within(now, s, e) { return now >= new Date(s) && now < new Date(e); }
 function past(now, e) { return now >= new Date(e); }
 
-// persist current filter mode
-let showNowOnlyState = false;
-
-function renderList(showNowOnly = showNowOnlyState) {
-  showNowOnlyState = showNowOnly; // persist
-
+function renderList(showNowOnly = false) {
   const now = getNowMs();
-  const nextSession = schedule.find(s => new Date(s.start) > now);
-
   const html = schedule.map(s => {
     const isCurrent = within(now, s.start, s.end);
     const isPast = past(now, s.end);
-    const isNext = nextSession && s.id === nextSession.id;
-
-    // auto-expand current and next by default
-    const base = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
-    const cls = (isCurrent || isNext) ? `${base} expanded` : base;
-
+    const cls = isCurrent ? 'session current expanded' : isPast ? 'session past' : 'session';
     let imgHTML = '';
     if (Array.isArray(s.img)) {
       imgHTML = s.img.map(url =>
@@ -143,7 +203,7 @@ function renderList(showNowOnly = showNowOnlyState) {
       <article id="${s.id}" class="${cls}">
         <div class="session-header">
           <h3>${s.title}${isCurrent ? '<span class="live-tag">LIVE</span>' : ''}</h3>
-          <button class="toggle-arrow" aria-label="Toggle details" aria-expanded="${cls.includes('expanded') ? 'true' : 'false'}">▼</button>
+          <button class="toggle-arrow" aria-label="Toggle details">▼</button>
         </div>
         <small>${fmt(s.start)}–${fmt(s.end)}${s.speaker ? ` · ${s.speaker}` : ''}</small>
         <div class="session-body">
@@ -158,36 +218,23 @@ function renderList(showNowOnly = showNowOnlyState) {
   // Expand/collapse behavior
   $$('#schedule article').forEach(el => {
     const btn = el.querySelector('.toggle-arrow');
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', e => {
       e.stopPropagation();
       el.classList.toggle('expanded');
-      const expanded = el.classList.contains('expanded');
-      btn.textContent = expanded ? '▲' : '▼';
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
     });
-
-    // Also expand/collapse when clicking anywhere on the box (except the button)
-    el.addEventListener('click', (e) => {
+    el.addEventListener('click', e => {
       if (!e.target.classList.contains('toggle-arrow')) {
         el.classList.toggle('expanded');
-        const expanded = el.classList.contains('expanded');
-        btn.textContent = expanded ? '▲' : '▼';
-        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
       }
     });
   });
 
   renderBanner(now);
-
-  // Ensure video visibility matches current mode (even after auto refresh)
-  const vid = document.querySelector('.event-video');
-  if (vid) {
-    if (showNowOnlyState) vid.classList.add('hidden');
-    else vid.classList.remove('hidden');
-  }
 }
 
-// ---- Banner logic ----
+// ---------------- Banner ----------------
 function renderBanner(now) {
   const current = schedule.find(s => within(now, s.start, s.end));
   const next = schedule.find(s => new Date(s.start) > now);
@@ -203,23 +250,19 @@ function renderBanner(now) {
   }
 }
 
-// ---- Init ----
+// ---------------- Init ----------------
 document.addEventListener('DOMContentLoaded', () => {
   $('#tzLabel').textContent = 'CET (UTC+1)';
-  renderList(showNowOnlyState);
-
-  // keep the current filter (All/Now) on auto refresh
-  setInterval(() => renderList(showNowOnlyState), 30000);
+  renderList();
+  setInterval(renderList, 30000);
 
   $('#showAll').onclick = () => {
-    showNowOnlyState = false;
-    renderList(showNowOnlyState);
+    renderList(false);
+    document.querySelector('.event-video')?.classList.remove('hidden');
   };
-
   $('#showCurrent').onclick = () => {
-    showNowOnlyState = true;
-    renderList(showNowOnlyState);
+    renderList(true);
+    document.querySelector('.event-video')?.classList.add('hidden');
   };
-
   $('#scrollTop').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 });
