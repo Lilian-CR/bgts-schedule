@@ -21,6 +21,16 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 .header-note { font-size: 0.75rem; color: #444; text-align: center; margin-top: 0.4rem; }
 .header-note a { color: #000; text-decoration: underline; font-weight: bold; }
 
+/* Section Divider */
+.section-divider {
+  border: none;
+  border-top: 3px solid #000; /* thicker solid black line */
+  margin: 1.25rem auto;
+  width: 85%; /* consistent shorter width, centered */
+  max-width: 650px; /* keeps it proportional with your content width */
+}
+
+/* Video */
 .event-video {
   display: block;
   margin: 1.25rem auto;
@@ -32,7 +42,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   border: 2px solid #000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   background: #000;
-  text-align: center; /* just in case the parent has weird flow */
+  text-align: center;
 }
 
 /* Hero */
@@ -87,8 +97,6 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   user-select: none;
-
-  /* these two lines stop Chrome/Android “canvas” box painting */
   contain: paint;
   background-clip: padding-box !important;
 }
@@ -116,7 +124,12 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
 .session.current { border-color: #000; }
 .session h3 { font-family: 'HomeVideoBold', Arial, sans-serif; font-size: 1rem; margin-bottom: 0.3rem; }
 .session small { font-size: 0.75rem; color: #666; display: block; }
-.session .desc { margin-top: 0.5rem; font-size: 0.85rem; color: #333; }
+.session .desc {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: justify; /* your new update */
+}
 .live-tag {
   background: #000;
   color: #fff;
@@ -138,7 +151,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   border: 1px solid #ccc;
 }
 
-/* Special rule: make Lunch and After-party photos use a 16:9 ratio */
+/* Special rule: make Lunch, Breaks and After-party photos 16:9 */
 #lunch .speaker-pic,
 #break1 .speaker-pic,
 #break2 .speaker-pic,
@@ -146,7 +159,7 @@ img { max-width: 100%; display: block; border-radius: 0.75rem; }
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  }
+}
 
 /* Collapsed past sessions */
 .session.past {
