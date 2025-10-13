@@ -49,17 +49,16 @@ const schedule = [
     desc: 'Unlock the secrets to building lasting wealth with strategies tailored for Black women aiming to accelerate financial growth and independence.'
   },
   {
-  id: 'break1',
-  start: `${DAY}T11:20:00${Z}`,
-  end: `${DAY}T11:30:00${Z}`,
-  title: 'Break & Networking',
-  img: [
-    'https://media.gettyimages.com/id/1442269395/photo/two-businesswomen-walking-down-the-coworking-stairs.jpg?s=612x612&w=0&k=20&c=uTw48PtN1OcWEz1D_-jgFLzVuqJVSuFOR1O2Q7ptZYo=',
-    'https://media.gettyimages.com/id/1634161872/photo/young-adult-black-woman-having-coffee-break-at-the-office.jpg?s=612x612&w=0&k=20&c=SnVFYLo71c_VXX9zXk_TU5eme8f6d_ExAxH9rU4WHBw='
-  ],
-  desc: 'Short networking break — connect and recharge with peers and mentors.'
-},
-
+    id: 'break1',
+    start: `${DAY}T11:20:00${Z}`,
+    end: `${DAY}T11:30:00${Z}`,
+    title: 'Break & Networking',
+    img: [
+      'https://media.gettyimages.com/id/1442269395/photo/two-businesswomen-walking-down-the-coworking-stairs.jpg?s=612x612&w=0&k=20&c=uTw48PtN1OcWEz1D_-jgFLzVuqJVSuFOR1O2Q7ptZYo=',
+      'https://media.gettyimages.com/id/1634161872/photo/young-adult-black-woman-having-coffee-break-at-the-office.jpg?s=612x612&w=0&k=20&c=SnVFYLo71c_VXX9zXk_TU5eme8f6d_ExAxH9rU4WHBw='
+    ],
+    desc: 'Short networking break — connect and recharge with peers and mentors.'
+  },
   {
     id: 'founders',
     start: `${DAY}T11:30:00${Z}`,
@@ -153,7 +152,7 @@ const schedule = [
     end: `${DAY}T17:00:00${Z}`,
     title: 'Panel Discussion - Thriving in Digital Media: Black Women Leading the Future of Content and Innovation',
     speaker: 'Panel: Sally Osei (Creator Manager, Zalando), Leanne Alie (Exec Producer, UK), Jade Vanriel (Content Creator), Oluwatoniloba Dreher Adenuga (Model & Poet)',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_800/B4EZk4qTLtKcAg-/0/1757592238613?e=1762992000&v=beta&t=wQtz2W5njYntVNfS-reJeRpsyVLKlgtoYibEJ8lpBhY',
+    img: 'https://media.licdn.com/dms/image/v2/D4D22AQE9MkUr4xFOSA/feedshare-shrink_1280/B4DZm1i_TMJYAs-/0/1759687473190?e=1762992000&v=beta&t=-1Iv3O8klCnZaVCYQd731zCaAnadySFRIJ9E7rbsUDk',
     desc: 'Hear from leading Black women redefining digital media, podcasting and influencer marketing in Europe’s creative industries.'
   },
   {
@@ -165,17 +164,18 @@ const schedule = [
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68c8322a9bfcdd3837d51543_IMG_2779.jpg',
     desc: 'Leadership, technology and purpose — Emamurho closes the summit with a powerful call to action for innovation and unity.'
   },
- {
-  id: 'afterparty',
-  start: `${DAY}T17:30:00${Z}`,
-  end: `${DAY}T19:00:00${Z}`,
-  title: 'The After-party!!!',
-  img: [
-    'https://media.gettyimages.com/id/1145839324/de/foto/teamapplaus-nach-treffen.jpg?s=612x612&w=0&k=20&c=DUXDVXxSIy5bD5srD04rXfwOibbsagjpNEgD79pqzaY=',
-    'https://t3.ftcdn.net/jpg/02/59/72/50/360_F_259725004_ZXZZe3fAcLY7e72W4cogM8JmLfVN11jQ.jpg'
-  ],
-  desc: 'Join us for building meaningful connections, great music, fun and drinks! - Unwind with community and friends to close the summit.'
-},
+  {
+    id: 'afterparty',
+    start: `${DAY}T17:30:00${Z}`,
+    end: `${DAY}T19:00:00${Z}`,
+    title: 'The After-party!!!',
+    img: [
+      'https://media.gettyimages.com/id/1145839324/de/foto/teamapplaus-nach-treffen.jpg?s=612x612&w=0&k=20&c=DUXDVXxSIy5bD5srD04rXfwOibbsagjpNEgD79pqzaY=',
+      'https://t3.ftcdn.net/jpg/02/59/72/50/360_F_259725004_ZXZZe3fAcLY7e72W4cogM8JmLfVN11jQ.jpg'
+    ],
+    desc: 'Join us for building meaningful connections, great music, fun and drinks! - Unwind with community and friends to close the summit.'
+  }
+];
 
 // ---- Time & render logic ----
 function fmt(iso){ return new Date(iso).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}); }
@@ -188,14 +188,17 @@ function renderList(){
     const isCurrent = within(now, s.start, s.end);
     const isPast = past(now, s.end);
     const cls = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
+
+    // ---- Multiple image support ----
     let imgHTML = '';
-if (Array.isArray(s.img)) {
-  imgHTML = s.img.map(url =>
-    `<img class="speaker-pic" src="${url}" alt="${s.speaker || s.title}">`
-  ).join('');
-} else if (s.img) {
-  imgHTML = `<img class="speaker-pic" src="${s.img}" alt="${s.speaker || s.title}">`;
-}
+    if (Array.isArray(s.img)) {
+      imgHTML = s.img.map(url =>
+        `<img class="speaker-pic" src="${url}" alt="${s.speaker || s.title}">`
+      ).join('');
+    } else if (s.img) {
+      imgHTML = `<img class="speaker-pic" src="${s.img}" alt="${s.speaker || s.title}">`;
+    }
+
     return `
       <article id="${s.id}" class="${cls}">
         <h3>${s.title}${isCurrent ? '<span class="live-tag">LIVE</span>' : ''}</h3>
@@ -204,6 +207,7 @@ if (Array.isArray(s.img)) {
         ${imgHTML}
       </article>`;
   }).join('');
+
   $('#schedule').innerHTML = html;
 
   $$('#schedule article').forEach(el => {
