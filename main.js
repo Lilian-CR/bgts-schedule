@@ -78,7 +78,7 @@ const schedule = [
     start: `${DAY}T13:00:00${Z}`,
     end: `${DAY}T14:00:00${Z}`,
     title: 'LLunch Break',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_800/B4EZnHoDhnIoAg-/0/1759990791356?e=1762992000&v=beta&t=lqmsUhYMJ9wT4tnDWtYBVQRdudm1Rap7n2ong983Sns'
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_800/B4EZnHoDhnIoAg-/0/1759990791356?e=1762992000&v=beta&t=lqmsUhYMJ9wT4tnDWtYBVQRdudm1Rap7n2ong983Sns',
     desc: 'Lunch & Networking with leaders in technology and corporate.'
   },
   {
