@@ -50,14 +50,11 @@ const schedule = [
   },
   {
     id: 'break1',
-    start: `${DAY}T11:20:00${Z}`,
-    end: `${DAY}T11:30:00${Z}`,
-    title: 'Break & Networking',
-    img: [
-      'https://media.gettyimages.com/id/1442269395/photo/two-businesswomen-walking-down-the-coworking-stairs.jpg?s=612x612&w=0&k=20&c=uTw48PtN1OcWEz1D_-jgFLzVuqJVSuFOR1O2Q7ptZYo=',
-      'https://media.gettyimages.com/id/1634161872/photo/young-adult-black-woman-having-coffee-break-at-the-office.jpg?s=612x612&w=0&k=20&c=SnVFYLo71c_VXX9zXk_TU5eme8f6d_ExAxH9rU4WHBw='
-    ],
-    desc: 'Short networking break — connect and recharge with peers and mentors.'
+  start: `${DAY}T11:20:00${Z}`,
+  end: `${DAY}T11:30:00${Z}`,
+  title: 'Morning Break & Networking',
+  img: 'https://media.gettyimages.com/id/1442269395/photo/two-businesswomen-walking-down-the-coworking-stairs.jpg?s=612x612&w=0&k=20&c=uTw48PtN1OcWEz1D_-jgFLzVuqJVSuFOR1O2Q7ptZYo=',
+  desc: 'Short networking break — connect and recharge with peers and mentors.'
   },
   {
     id: 'founders',
@@ -141,10 +138,11 @@ const schedule = [
   },
   {
     id: 'break2',
-    start: `${DAY}T16:00:00${Z}`,
-    end: `${DAY}T16:15:00${Z}`,
-    title: 'Break',
-    desc: 'Short refresh break before final sessions.'
+  start: `${DAY}T16:00:00${Z}`,
+  end: `${DAY}T16:15:00${Z}`,
+  title: 'Afternoon Break & Networking',
+  img: 'https://media.gettyimages.com/id/1634161872/photo/young-adult-black-woman-having-coffee-break-at-the-office.jpg?s=612x612&w=0&k=20&c=SnVFYLo71c_VXX9zXk_TU5eme8f6d_ExAxH9rU4WHBw=',
+  desc: 'Short refresh break before final sessions — grab a coffee, relax, and prepare for the last talks.'
   },
   {
     id: 'media',
