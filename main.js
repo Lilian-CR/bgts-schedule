@@ -1,9 +1,9 @@
-// ---------------- Helpers ----------------
+// Helpers
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 const DAY = '2025-11-13', Z = '+01:00';
 
-// ---- Time override for testing ----
+// Testing
 function getNowMs() {
   const params = new URLSearchParams(location.search);
   const nowParam = params.get('now');
@@ -19,7 +19,7 @@ function getNowMs() {
   return Date.now();
 }
 
-// ---------------- Schedule Data ----------------
+// Schedule Data
 const schedule = [
   {
     id: 'opening',
@@ -175,7 +175,7 @@ const schedule = [
   }
 ];
 
-// ---------------- Render Logic ----------------
+// Render Logic
 function fmt(iso) {
   return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
@@ -215,7 +215,7 @@ function renderList(showNowOnly = false) {
 
   $('#schedule').innerHTML = html;
 
-  // Expand/collapse behavior
+  // Expand/collapse box
   $$('#schedule article').forEach(el => {
     const btn = el.querySelector('.toggle-arrow');
     btn.addEventListener('click', e => {
@@ -234,7 +234,7 @@ function renderList(showNowOnly = false) {
   renderBanner(now);
 }
 
-// ---------------- Banner ----------------
+// Banner 
 function renderBanner(now) {
   const current = schedule.find(s => within(now, s.start, s.end));
   const next = schedule.find(s => new Date(s.start) > now);
@@ -250,7 +250,7 @@ function renderBanner(now) {
   }
 }
 
-// ---------------- Init ----------------
+// In(n)it 
 document.addEventListener('DOMContentLoaded', () => {
   $('#tzLabel').textContent = 'CET (UTC+1)';
   renderList();
