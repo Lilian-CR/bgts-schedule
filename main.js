@@ -9,7 +9,7 @@ function getNowMs() {
   const nowParam = params.get('now');
   const offsetMin = params.get('offset');
   if (nowParam) {
-    const d = new Date(nowParam);
+    const d = new Date(nowParam); 
     if (!isNaN(d)) return d.getTime();
   }
   if (offsetMin) {
