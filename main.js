@@ -246,7 +246,7 @@ function renderBanner(now) {
     const mins = Math.round((new Date(next.start) - now) / 60000);
     banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span>${next.title} in ${mins} min</div>`;
   } else {
-    banner.innerHTML = '';
+    banner.innerHTML = ''; 
   }
 }
 
