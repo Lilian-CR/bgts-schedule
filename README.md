@@ -1,5 +1,6 @@
 <p align="center">
   <img src="./images/main-read_me_image.png" alt="Author Pic" width="600"/>
+  <img src="./images/main-read_me_mobile.png" alt="Author Pic" width="600"/>
 </p>
 
 # 🖤 **Black Girls Tech Summit 2025 — Live Schedule** 🖤
