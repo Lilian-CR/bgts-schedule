@@ -229,6 +229,7 @@ body { padding-bottom: 88px; }
   display: block;
   border: 1px solid #ccc;
 }
+#arrival .speaker-pic,
 #lunch .speaker-pic,
 #break1 .speaker-pic,
 #break2 .speaker-pic,
