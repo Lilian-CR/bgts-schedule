@@ -21,11 +21,20 @@ function getNowMs() {
 
 // Schedule Info (Data)
 const schedule = [
+  
+  {
+    id: 'arrival',
+    start: `${DAY}T09:30:00${Z}`,
+    end: `${DAY}T09:30:00${Z}`,
+    title: 'Arrival & Networking',
+    img: 'https://codingblackfemales.com/img/black-woman-phone.jpg',
+    desc: 'Doors open for registration, coffee and early networking before the sessions begin.'
+  },
   {
     id: 'opening',
     start: `${DAY}T09:30:00${Z}`,
     end: `${DAY}T09:45:00${Z}`,
-    title: 'Arrival & Networking',
+    title: 'Opening Remarks & Welcome',
     speaker: 'Chiedza Muguti — Product Leader & Coach',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/685bb8865a3af01f3afa1aa1_Chiedza%20Muguti.jpeg',
     desc: 'Kick off the summit with inspiring remarks by product leader and coach Chiedza Muguti, setting the tone for a day of empowerment and connection.'
