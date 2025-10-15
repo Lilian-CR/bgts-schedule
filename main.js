@@ -248,14 +248,42 @@ function renderBanner(now) {
   const next = schedule.find(s => new Date(s.start) > now);
   const banner = $('#liveBanner');
 
-  if (current) banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
-  else if (next) {
-    const mins = Math.round((new Date(next.start) - now) / 60000);
-    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span>${next.title} in ${mins} min</div>`;
-  } else banner.innerHTML = '';
+  if (current) {
+    banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
+    return;
+  }
+
+  const summitStart = new Date(`${DAY}T00:00:00${Z}`).getTime();
+  const hourSwitch = new Date(`${DAY}T00:01:00${Z}`).getTime();
+  const minuteSwitch = new Date(`${DAY}T08:00:00${Z}`).getTime();
+
+  if (next) {
+    const diffMs = new Date(next.start).getTime() - now;
+    let timeStr;
+
+    // Before event day — show in days
+    if (now < summitStart) {
+      const days = Math.ceil((summitStart - now) / (1000 * 60 * 60 * 24));
+      timeStr = `${days} day${days !== 1 ? 's' : ''}`;
+    }
+    // After midnight but before 8 am — show in hours
+    else if (now >= hourSwitch && now < minuteSwitch) {
+      const hours = Math.ceil(diffMs / (1000 * 60 * 60));
+      timeStr = `${hours} hour${hours !== 1 ? 's' : ''}`;
+    }
+    // After 8 am on the day — show in minutes
+    else {
+      const mins = Math.ceil(diffMs / 60000);
+      timeStr = `${mins} min`;
+    }
+
+    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span> ${next.title} in ${timeStr}</div>`;
+  } else {
+    banner.innerHTML = '';
+  }
 }
 
-// In(n)it
+// Init
 document.addEventListener('DOMContentLoaded', () => {
   const tz = $('#tzLabel');
   if (tz) tz.textContent = 'CET (UTC+1)';
