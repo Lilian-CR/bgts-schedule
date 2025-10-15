@@ -97,7 +97,7 @@ const schedule = [
     end: `${DAY}T15:00:00${Z}`,
     title: '1. AI & Automation: Unlocking Opportunities for Black Women in Tech',
     speaker: 'Furat Abdulle (Avanade) · Jane Waithira (SAP SE)',
-    img: 'https://github.com/Lilian-CR/bgts-schedule/blob/main/images/Furat_Abdulle-Jane_Waithira.jpg',
+    img: 'https://raw.githubusercontent.com/Lilian-CR/bgts-schedule/refs/heads/main/images/Furat_Abdulle-Jane_Waithira.jpg',
     desc: 'Explore AI-driven career paths and inclusive innovation with hands-on insights from leading data and automation experts.'
   },
   {
