@@ -159,7 +159,7 @@ const schedule = [
     end: `${DAY}T17:00:00${Z}`,
     title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content and Innovation',
     speaker: 'Sally Osei — Creator Manager, Zalando, Leanne Alie — Executive Producer and Podcast Leader, Jade Vanriel — Property and Lifestyle Content Creator & Oluwatoniloba Dreher Adenuga — Model, Content Creator & Poet',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
+    img: 'images/Sally_Ose-Leanne_Alie-Jade_Vanriel-Dreher Adenuga',
     desc: 'Sally Osei, Leanne Alie, Jade Vanriel, and Oluwatoniloba Dreher Adenuga explore how Black women are shaping digital media and influencer culture. Learn how to build a creative career in a fast-evolving $800 billion global industry.'
   },
   {
