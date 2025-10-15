@@ -249,7 +249,7 @@ function renderBanner(now) {
   const banner = $('#liveBanner');
 
   if (current) {
-    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span> ${next.title} &#x203A; in ${timeStr}</div>`;
+    banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
     return;
   }
 
@@ -277,13 +277,13 @@ function renderBanner(now) {
       timeStr = `${mins} min`;
     }
 
-    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span> ${next.title} in ${timeStr}</div>`;
+    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span> ${next.title} &#x203A; in ${timeStr}</div>`;
   } else {
     banner.innerHTML = '';
   }
 }
 
-// Init
+// In(n)it
 document.addEventListener('DOMContentLoaded', () => {
   const tz = $('#tzLabel');
   if (tz) tz.textContent = 'CET (UTC+1)';
