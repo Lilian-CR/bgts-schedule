@@ -13,38 +13,36 @@
   <!-- Header -->
   <header class="header">
     <img src="images/header.png" alt="Black Girls Tech Summit Banner" class="header-img">
-    <p class="header-note"><i>
-      This site is an independent student project made for attendees.
-      For official updates, please visit</i>
-      <a href="https://www.blackgirlstechsummit.com/" target="_blank"><strong>blackgirlstechsummit.com</strong></a>.
-    </p>
-
-    <hr class="section-divider">
   </header>
 
-  <!-- Title -->
+  <!-- Hero Block -->
   <section class="hero">
-    <h2>Black Girls Tech Summit 2025</h2>
-    <div class="stack-lines">
-      <div class="line">The Shift — Power, Progress &amp; Possibility</div>
-      <div class="line">Thu, 13 Nov 2025 · Zalando BHW · Berlin</div>
-      <div class="line">
-        <a href="https://www.google.com/maps/search/?api=1&query=Hedwig-Wachenheim-Stra%C3%9Fe+7+10243+Berlin" target="_blank">📍 Get Directions</a>
+    <div class="hero-block">
+      <div class="hero-line">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="hero-icon">
+          <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v3H2V6a2 2 0 0 1 2-2h1V3a1 1 0 1 1 2 0v1zM2 10h20v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10zm5 3v2h2v-2H7zm0 4v2h2v-2H7zm4-4v2h2v-2h-2zm0 4v2h2v-2h-2zm4-4v2h2v-2h-2zm0 4v2h2v-2h-2z"/>
+        </svg>
+        <span>THURSDAY 13TH NOVEMBER 2025</span>
+      </div>
+      <div class="hero-line">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="hero-icon">
+          <path d="M3 21V8l9-5 9 5v13h-7v-6H10v6H3zm9-13.74L6 10.5V12h6V7.26zM8 14h2v2H8v-2z"/>
+        </svg>
+        <span>ZALANDO BERLIN CAMPUS</span>
+      </div>
+      <div class="hero-line">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="hero-icon">
+          <path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+        </svg>
+        <span>BERLIN, GERMANY</span>
+      </div>
+      <h2 class="hero-subtitle">Celebrating, connecting, and empowering Black women in technology</h2>
+      <div class="hero-meta">
+        <i>The Shift — Power, Progress &amp; Possibility</i><br>
+        <strong>Headline Sponsor:</strong>Zalando<br><strong>Silver Sponsor:</strong> SAP SE
       </div>
     </div>
   </section>
-
-  <!-- Meta info -->
-  <section class="meta">
-    <div class="info-grid">
-      <div><span>Doors:</span><strong> 09:00</strong></div>
-      <div><span>Wrap:</span><strong> 19:00</strong></div>
-      <div><span>Timezone:</span><strong id="tzLabel"> CET</strong></div>
-    </div>
-    <p class="sponsors"><strong>Headline Sponsor:</strong> Zalando · <strong>Silver Sponsor:</strong> SAP SE</p>
-  </section>
-  
-  <hr class="section-divider">
 
   <!-- Live banner -->
   <div id="liveBanner" class="live-banner" aria-live="polite"></div>
@@ -52,21 +50,11 @@
   <!-- Schedule -->
   <main id="schedule" class="schedule"></main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="author">
-      <p>By: <strong>Lilian Rodrigues</strong><br>
-      Aspiring Front-End · Back-End · Full-Stack Developer<br>
-      ReDI School Full-Stack Development Alumna<br>
-      Berlin, Germany<br>
-      <a href="https://liliantree.netlify.app/" target="_blank"><strong>Website</strong></a></p>
-    </div>
-  </footer>
-
   <!-- Bottom navigation -->
   <nav class="bottom-nav">
     <button id="showAll" class="btn-main">All</button>
     <button id="showCurrent" class="btn-alt">Now</button>
+    <button id="showPast" class="btn-alt">Past</button>
     <button id="scrollTop" class="btn-alt">Top</button>
   </nav>
 
