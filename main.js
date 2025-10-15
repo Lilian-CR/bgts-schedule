@@ -52,7 +52,7 @@ const schedule = [
     id: 'wealth',
     start: `${DAY}T10:30:00${Z}`,
     end: `${DAY}T11:15:00${Z}`,
-    title: 'WORKSHOP: Level Up Your Wealth – Black Women’s Strategy for Financial Growth and Wealth Generation',
+    title: 'Level Up Your Wealth: Black Women´s Strategy for Financial Growth and Wealth Generation',
     speaker: 'Dineo Ledwaba-Chapman — Financial Adviser at Belvedere Wealth Management',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68b0c3931b97d76faef7ede6_Dineo%20-%20Photo.jpg',
     desc: 'Unlock the secrets to building lasting wealth with strategies tailored for Black women aiming to accelerate financial growth and independence.'
@@ -70,7 +70,7 @@ const schedule = [
     start: `${DAY}T11:30:00${Z}`,
     end: `${DAY}T12:15:00${Z}`,
     title: 'Panel Discussion – Fueling Progress for Black Female Founders',
-    speaker: 'Aneri Pradhan, Cosima Richardson, Leyla F Karaha, Gloria Niiquaye',
+    speaker: 'Aneri Pradhan — Founding Partner, Klimatic Ventures, Cosima Richardson — Founder & CEO, Kynd Hair, Leyla F. Karaha — Founder,  YourY Network & Catalyst Noir & Gloria Niiquaye — CEO & Co-Founder, COMESO',
     img: 'images/Aneri_Pradhan-Cosima_Richardson-Leyla_F_Karaha-Gloria_Niiquaye.jpg',
     desc: 'How Black women founders scale purpose-driven startups through innovative funding models, partnerships, and community-based approaches.'
   },
@@ -79,7 +79,7 @@ const schedule = [
     start: `${DAY}T12:15:00${Z}`,
     end: `${DAY}T13:00:00${Z}`,
     title: 'Panel Discussion – Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
-    speaker: 'Liz Osumba, Renee Kapuku, Idowu Adesina, Madame Joyce',
+    speaker: 'Liz Osumba — Product Designer, Zalando, Renee Kapuku — Co-Founder, To My Sisters & Author,  Idowu Adesina — Snr Product Designer, Zalando & Madame Joyce — Presenter, Podcast Host & Producer',
     img: 'https://raw.githubusercontent.com/Lilian-CR/bgts-schedule/refs/heads/main/images/Liz_Osumba-Renee_Kapuku-Idowu_Adesina-Madame_Joyce.jpg',
     desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
   },
@@ -96,7 +96,7 @@ const schedule = [
     start: `${DAY}T14:00:00${Z}`,
     end: `${DAY}T15:00:00${Z}`,
     title: '1. AI & Automation: Unlocking Opportunities for Black Women in Tech',
-    speaker: 'Furat Abdulle (Avanade) · Jane Waithira (SAP SE)',
+    speaker: 'Furat Abdulle — Consultant, Avanade · Jane Waithira — Developer, SAP SE',
     img: 'https://raw.githubusercontent.com/Lilian-CR/bgts-schedule/refs/heads/main/images/Furat_Abdulle-Jane_Waithira.jpg',
     desc: 'Explore AI-driven career paths and inclusive innovation with hands-on insights from leading data and automation experts.'
   },
@@ -113,8 +113,8 @@ const schedule = [
     id: 'content',
     start: `${DAY}T14:00:00${Z}`,
     end: `${DAY}T15:00:00${Z}`,
-    title: '3. Content Creation & Building Influence: How Black Women Can Lead Conversations on LinkedIn & TikTok',
-    speaker: 'Various Industry Creators',
+    title: '3. Content Creation & Building Influence: How Black Women Can Lead Industry Conversations on TikTok',
+    speaker: 'Amanda Uduku — Social Commerce Strategist & Former TikTok Shop Insider',
     img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
     desc: 'How to build digital presence and income across LinkedIn, TikTok and beyond — strategies for authentic storytelling and sustainable growth.'
   },
@@ -123,7 +123,7 @@ const schedule = [
     start: `${DAY}T15:00:00${Z}`,
     end: `${DAY}T16:00:00${Z}`,
     title: '1. Shattering the Glass Ceiling: Black Women Leading in Executive & Board Roles',
-    speaker: 'Dr. Audrey-Flore Ngomsik — CEO, Trianon Scientific Communication',
+    speaker: 'Dr. Audrey-Flore Ngomsik — Board Member and Brussels Policy Advisor',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68be85de6d671f8ef1cb4ef7_Dr%20Audrey-Flore%20Ngomsik%20(3)-min.jpg',
     desc: 'Pathways for Black women advancing into executive and board roles across Europe; transforming diversity into strategic advantage.'
   },
@@ -131,7 +131,7 @@ const schedule = [
     id: 'skills',
     start: `${DAY}T15:00:00${Z}`,
     end: `${DAY}T16:00:00${Z}`,
-    title: '2. Future-Proof Your Skills: Tech Trends & Skills Every Black Woman Needs in 2026 and Beyond',
+    title: '2. Protect Ya Neck: Cybersecurity, Hacking & Owning Your Data',
     speaker: 'Florence Mottay — VP & CISO, Zalando',
     img: 'https://cdn.prod.website-files.com/68406261f85bbcb0476c7540/68be862a9cdf82cd18e08af8_Florence_Mottay_03.jpg',
     desc: 'Explore in-demand digital skills and emerging trends to keep your career resilient and ahead of the curve.'
@@ -141,7 +141,7 @@ const schedule = [
     start: `${DAY}T15:00:00${Z}`,
     end: `${DAY}T16:00:00${Z}`,
     title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
-    speaker: 'Ibtehal Hussein (HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
+    speaker: 'Ibtehal Hussein — Global Talent Acquisition Team Lead, HelloFresh & Adenike Adekunbi — Talent Acquisition Partner, Germany',
     img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
@@ -157,8 +157,8 @@ const schedule = [
     id: 'media',
     start: `${DAY}T16:15:00${Z}`,
     end: `${DAY}T17:00:00${Z}`,
-    title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content & Innovation',
-    speaker: 'Sally Osei, Leanne Alie, Jade Vanriel, Oluwatoniloba Dreher Adenuga',
+    title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content and Innovation',
+    speaker: 'Sally Osei — Creator Manager, Zalando, Leanne Alie — Executive Producer and Podcast Leader, Jade Vanriel — Property and Lifestyle Content Creator & Oluwatoniloba Dreher Adenuga — Model, Content Creator & Poet',
     img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
     desc: 'Hear from leading Black women redefining digital media, podcasting, and influencer marketing in Europe’s creative industries.'
   },
