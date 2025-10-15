@@ -115,7 +115,7 @@ const schedule = [
     end: `${DAY}T15:00:00${Z}`,
     title: '3. Content Creation & Building Influence: How Black Women Can Lead Industry Conversations on TikTok',
     speaker: 'Amanda Uduku — Social Commerce Strategist & Former TikTok Shop Insider',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
+    img: 'images/Amanda_Uduku.jpeg',
     desc: 'How to build digital presence and income across LinkedIn, TikTok and beyond — strategies for authentic storytelling and sustainable growth.'
   },
   {
