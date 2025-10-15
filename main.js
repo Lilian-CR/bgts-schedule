@@ -80,7 +80,7 @@ const schedule = [
     end: `${DAY}T13:00:00${Z}`,
     title: 'Panel Discussion – Can We Talk for Real? A Sister Circle on Culture, Sector Challenges, and Society',
     speaker: 'Liz Osumba, Renee Kapuku, Idowu Adesina, Madame Joyce',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
+    img: 'https://raw.githubusercontent.com/Lilian-CR/bgts-schedule/refs/heads/main/images/Liz_Osumba-Renee_Kapuku-Idowu_Adesina-Madame_Joyce.jpg',
     desc: 'Candid talk-show-style discussion on culture, industry challenges and collective empowerment among Black women creatives and tech professionals.'
   },
   {
