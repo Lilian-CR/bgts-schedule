@@ -249,7 +249,7 @@ function renderBanner(now) {
   const banner = $('#liveBanner');
 
   if (current) {
-    banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
+    banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span> ${next.title} &#x203A; in ${timeStr}</div>`;
     return;
   }
 
