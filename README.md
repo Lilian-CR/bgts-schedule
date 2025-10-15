@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/read_me.jpg" alt="Mock Up" width="800"/>
+  <img src="./images/read_me.jpg" alt="Mock Up" width="1000"/>
 </p>
 
 # 🖤 **Black Girls Tech Summit 2025 — Live Schedule** 🖤
