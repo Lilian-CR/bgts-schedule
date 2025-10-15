@@ -1,15 +1,15 @@
-// Helpers
+// ---------------- Helpers ----------------
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 const DAY = '2025-11-13', Z = '+01:00';
 
-// Testing
+// ---- Time override for testing ----
 function getNowMs() {
   const params = new URLSearchParams(location.search);
   const nowParam = params.get('now');
   const offsetMin = params.get('offset');
   if (nowParam) {
-    const d = new Date(nowParam); 
+    const d = new Date(nowParam);
     if (!isNaN(d)) return d.getTime();
   }
   if (offsetMin) {
@@ -19,7 +19,7 @@ function getNowMs() {
   return Date.now();
 }
 
-// Schedule Data
+// ---------------- Schedule Data ----------------
 const schedule = [
   {
     id: 'opening',
@@ -133,7 +133,7 @@ const schedule = [
     end: `${DAY}T16:00:00${Z}`,
     title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
     speaker: 'Ibtehal Hussein (HelloFresh) · Adenike Adekunbi (Talent Partner, DE)',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
     desc: 'Practical strategies for writing standout CVs, acing interviews, and navigating global hiring with confidence.'
   },
   {
@@ -150,7 +150,7 @@ const schedule = [
     end: `${DAY}T17:00:00${Z}`,
     title: 'Panel Discussion – Thriving in Digital Media: Black Women Leading the Future of Content & Innovation',
     speaker: 'Sally Osei, Leanne Alie, Jade Vanriel, Oluwatoniloba Dreher Adenuga',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619?e=1762992000&v=beta&t=Y_jbeauK55kw4CQefXUuIW42j8-eXf_Zw579iwxA8WI',
+    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
     desc: 'Hear from leading Black women redefining digital media, podcasting, and influencer marketing in Europe’s creative industries.'
   },
   {
@@ -175,29 +175,31 @@ const schedule = [
   }
 ];
 
-// Render Logic
+// ---------------- Render Logic ----------------
 function fmt(iso) {
   return new Date(iso).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 function within(now, s, e) { return now >= new Date(s) && now < new Date(e); }
 function past(now, e) { return now >= new Date(e); }
 
-function renderList(showNowOnly = false) {
+function renderList(mode = 'all') {
   const now = getNowMs();
-  const html = schedule.map(s => {
+  let filtered = schedule;
+
+  if (mode === 'now') filtered = schedule.filter(s => within(now, s.start, s.end));
+  else if (mode === 'past') filtered = schedule.filter(s => past(now, s.end));
+
+  const html = filtered.map(s => {
     const isCurrent = within(now, s.start, s.end);
     const isPast = past(now, s.end);
-    const cls = isCurrent ? 'session current expanded' : isPast ? 'session past' : 'session';
+    const cls = isCurrent ? 'session current' : isPast ? 'session past' : 'session';
+
     let imgHTML = '';
     if (Array.isArray(s.img)) {
-      imgHTML = s.img.map(url =>
-        `<img class="speaker-pic" src="${url}" alt="${s.speaker || s.title}">`
-      ).join('');
+      imgHTML = s.img.map(url => `<img class="speaker-pic" src="${url}" alt="${s.speaker || s.title}">`).join('');
     } else if (s.img) {
       imgHTML = `<img class="speaker-pic" src="${s.img}" alt="${s.speaker || s.title}">`;
     }
-
-    if (showNowOnly && !isCurrent) return '';
 
     return `
       <article id="${s.id}" class="${cls}">
@@ -215,54 +217,54 @@ function renderList(showNowOnly = false) {
 
   $('#schedule').innerHTML = html;
 
-  // Expand/collapse box
+  // Accordion logic — only one expanded
   $$('#schedule article').forEach(el => {
     const btn = el.querySelector('.toggle-arrow');
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      el.classList.toggle('expanded');
+    const header = el.querySelector('.session-header');
+
+    const toggle = () => {
+      const isExpanded = el.classList.contains('expanded');
+      $$('#schedule article.expanded').forEach(other => {
+        if (other !== el) {
+          other.classList.remove('expanded');
+          const otherBtn = other.querySelector('.toggle-arrow');
+          if (otherBtn) otherBtn.textContent = '▼';
+        }
+      });
+      el.classList.toggle('expanded', !isExpanded);
       btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
-    });
-    el.addEventListener('click', e => {
-      if (!e.target.classList.contains('toggle-arrow')) {
-        el.classList.toggle('expanded');
-        btn.textContent = el.classList.contains('expanded') ? '▲' : '▼';
-      }
-    });
+    };
+
+    btn.addEventListener('click', e => { e.stopPropagation(); toggle(); });
+    header.addEventListener('click', e => { if (!e.target.classList.contains('toggle-arrow')) toggle(); });
   });
 
   renderBanner(now);
 }
 
-// Banner 
+// ---------------- Banner ----------------
 function renderBanner(now) {
   const current = schedule.find(s => within(now, s.start, s.end));
   const next = schedule.find(s => new Date(s.start) > now);
   const banner = $('#liveBanner');
 
-  if (current) {
-    banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
-  } else if (next) {
+  if (current) banner.innerHTML = `<div class="box"><strong>NOW:</strong> ${current.title}</div>`;
+  else if (next) {
     const mins = Math.round((new Date(next.start) - now) / 60000);
     banner.innerHTML = `<div class="box"><span class="upnext">UP NEXT:</span>${next.title} in ${mins} min</div>`;
-  } else {
-    banner.innerHTML = ''; 
-  }
+  } else banner.innerHTML = '';
 }
 
-// In(n)it 
+// ---------------- Init ----------------
 document.addEventListener('DOMContentLoaded', () => {
-  $('#tzLabel').textContent = 'CET (UTC+1)';
-  renderList();
-  setInterval(renderList, 30000);
+  const tz = $('#tzLabel');
+  if (tz) tz.textContent = 'CET (UTC+1)';
 
-  $('#showAll').onclick = () => {
-    renderList(false);
-    document.querySelector('.event-video')?.classList.remove('hidden');
-  };
-  $('#showCurrent').onclick = () => {
-    renderList(true);
-    document.querySelector('.event-video')?.classList.add('hidden');
-  };
+  renderList('all');
+  setInterval(() => renderList('all'), 30000);
+
+  $('#showAll').onclick = () => renderList('all');
+  $('#showCurrent').onclick = () => renderList('now');
+  $('#showPast').onclick = () => renderList('past');
   $('#scrollTop').onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 });
