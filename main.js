@@ -24,7 +24,7 @@ const schedule = [
   
   {
     id: 'arrival',
-    start: `${DAY}T09:30:00${Z}`,
+    start: `${DAY}T09:00:00${Z}`,
     end: `${DAY}T09:30:00${Z}`,
     title: 'Arrival & Networking',
     img: 'https://codingblackfemales.com/img/black-woman-phone.jpg',
