@@ -142,7 +142,7 @@ const schedule = [
     end: `${DAY}T16:00:00${Z}`,
     title: '3. Foundational Skills: Crafting CVs, Applications & Nailing Interviews',
     speaker: 'Ibtehal Hussein — Global Talent Acquisition Team Lead, HelloFresh & Adenike Adekunbi — Talent Acquisition Partner, Germany',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQEMXkazuODgDA/feedshare-shrink_1280/B4EZk4qTLtKcAs-/0/1757592238619',
+    img: 'images/Ibtehal_Hussein-Adenike_Adekunbi.jpg',
     desc: 'Ibtehal Hussein (HelloFresh) and Adenike Adekunbi guide you through crafting standout CVs and mastering interviews. Gain practical insights to navigate bias, showcase strengths, and confidently advance your career in tech.'
   },
   {
