@@ -88,7 +88,7 @@ const schedule = [
     start: `${DAY}T13:00:00${Z}`,
     end: `${DAY}T14:00:00${Z}`,
     title: 'Lunch Break',
-    img: 'https://media.licdn.com/dms/image/v2/D4E22AQHuhIBm7Xz0WA/feedshare-shrink_2048_1536/B4EZnHoDhnIoAw-/0/1759990791452?e=1762992000&v=beta&t=xcOVrselRKCTQ_EYSkQTNkcNy-Qs0ys1wwh-rlMuQZg',
+    img: 'https://ucddc7c5996d5f2ab4a73c9ba2d2.previews.dropboxusercontent.com/p/thumb/AC1obTfaglA0yASpSua5ovIbSibkv_vMyIihzF6zaccjuNcy-TpWNYrV8g4QuLSUrEJxbhQYnvvoquL6La5TES5wTpS-htK-j6quGtTYQlYsX2cu5bPltlpataQT932yY8EBkBdQiZp8mWbAHxZqoHUyIklCH1jTViIzdoBgl5Lsu2WQnxQAM1YUPsdqKlUkeHNtvlFM879meib29PLzzXm4P5hFze1oaIOqrg7ZryyH0TaVbs-8_arD4zpbA0T-PoiW2P7F_Q7i4JAEjVibY2YY1yaZxWgJPeLN54o2tQ3ciraS7s_9qQwQvh3V_S380mVsHolefbw3JZ1N21kziHCTmPdpbPKOJdx10ee95ejLqsBne_ssC-jMswS6efXAn-A/p.jpeg?is_prewarmed=true',
     desc: 'Enjoy a nourishing meal and inspiring conversation with fellow attendees and industry leaders. A perfect moment to connect, exchange ideas, and refuel for the afternoon sessions.'
   },
   {
